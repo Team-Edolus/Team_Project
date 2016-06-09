@@ -10,9 +10,9 @@ namespace RPG_AdvancedCS_May.Structure
 {
     class CharacterUnit : Unit
     {
-        public CharacterUnit(int sizeX, int sizeY, int x, int y, int attackPoints, int currentHp, 
-            int defensePoints, int maxHp, int movementSpeed, SpriteType spriteType) 
-            : base(sizeX, sizeY, x, y, attackPoints, currentHp, defensePoints, maxHp, movementSpeed, spriteType)
+        public CharacterUnit(int sizeX, int sizeY, int x, int y, int currentHp, int maxHp, int attackPoints,
+            int defensePoints, int movementSpeed, SpriteType spriteType)
+            : base(sizeX, sizeY, x, y, currentHp, maxHp, attackPoints, defensePoints, movementSpeed, spriteType)
         {
         }
     }

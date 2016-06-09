@@ -5,7 +5,7 @@ namespace RPG_AdvancedCS_May.Graphics
     {
         //Format:
         //private const string ImagePath = "../../Resources/ExampleImage.png";
-        private const string CharacterImagePath = "../../Resources/Character_16x24.png";
+        public const string Character1ImagePath = "../../Resources/Character_16x24.png";
 
     }
 }

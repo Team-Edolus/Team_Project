@@ -9,7 +9,7 @@ using RPG_AdvancedCS_May.Graphics;
 
 namespace RPG_AdvancedCS_May.Interfaces
 {
-    interface IRenderable
+    interface IRenderable : IGameObject
     {
         SpriteType SpriteType { get; set; }
     }

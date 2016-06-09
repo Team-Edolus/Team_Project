@@ -28,19 +28,16 @@ namespace RPG_AdvancedCS_May.Controllers
             switch (e.KeyCode)
             {
                 case Keys.W:
-                    if (this.OnUpPressed != null)
-                    {
-                        this.OnUpPressed(this, new EventArgs());
-                    }
+                    this.OnUpPressed?.Invoke(this, new EventArgs());
                     break;
-                case Keys.S: //TO DO: implement checks!
-                    this.OnDownPressed(this, new EventArgs());
+                case Keys.S:
+                    this.OnDownPressed?.Invoke(this, new EventArgs());
                     break;
                 case Keys.D:
-                    this.OnRightPressed(this, new EventArgs());
+                    this.OnRightPressed?.Invoke(this, new EventArgs());
                     break;
                 case Keys.A:
-                    this.OnLeftPressed(this, new EventArgs());
+                    this.OnLeftPressed?.Invoke(this, new EventArgs());
                     break;
                 default:
                     break;

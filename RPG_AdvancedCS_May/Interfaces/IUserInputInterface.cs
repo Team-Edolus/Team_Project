@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPG_AdvancedCS_May.Interfaces
 {
-    interface IUserInputInterface
+    public interface IUserInputInterface
     {
         event EventHandler OnRightPressed;
         event EventHandler OnLeftPressed;

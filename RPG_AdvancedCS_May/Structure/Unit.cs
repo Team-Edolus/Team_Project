@@ -20,12 +20,13 @@ namespace RPG_AdvancedCS_May.Structure
         public int MaxHP { get; set; }
 
         public Direction Direction { get; set; }
+
         public int MovementSpeed { get; set; }
 
         public SpriteType SpriteType { get; set; }
 
-        protected Unit(int sizeX, int sizeY, int x, int y, int attackPoints, int currentHp, 
-            int defensePoints, int maxHp, int movementSpeed, SpriteType spriteType) 
+        protected Unit(int sizeX, int sizeY, int x, int y, int currentHp, int maxHp,
+            int attackPoints, int defensePoints, int movementSpeed, SpriteType spriteType) 
             : base(sizeX, sizeY, x, y)
         {
             this.AttackPoints = attackPoints;
