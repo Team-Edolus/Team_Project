@@ -7,3 +7,6 @@ E:\Google Drive\SU\06-Andvanced C#-May_2016\Teamwork\RPG_AdvancedCS_May\RPG_Adva
 E:\Google Drive\SU\06-Andvanced C#-May_2016\Teamwork\RPG_AdvancedCS_May\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.csproj.GenerateResource.Cache
 E:\Google Drive\SU\06-Andvanced C#-May_2016\Teamwork\RPG_AdvancedCS_May\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.exe
 E:\Google Drive\SU\06-Andvanced C#-May_2016\Teamwork\RPG_AdvancedCS_May\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.pdb
+C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.exe.config
+C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.exe
+C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.pdb

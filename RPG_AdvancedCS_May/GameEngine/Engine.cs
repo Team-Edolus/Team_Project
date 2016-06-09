@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using System.Windows.Forms;
 
-namespace RPG_AdvancedCS_May
+namespace RPG_AdvancedCS_May.GameEngine
 {
     public class Engine
     {
