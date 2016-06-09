@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RPG_AdvancedCS_May.Structure
+namespace RPG_AdvancedCS_May.GameEngine
 {
-    class Spell
+    class CollisionHandler
     {
+        //TO DO
     }
 }

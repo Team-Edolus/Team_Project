@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ControllerUserInput.cs" />
+    <Compile Include="GameEngine\CollisionHandler.cs" />
     <Compile Include="GameEngine\Direction.cs" />
     <Compile Include="GameEngine\Engine.cs" />
     <Compile Include="GameWindow.cs">
@@ -70,7 +71,11 @@
     <Compile Include="Structure\FriendlyNPCUnit.cs" />
     <Compile Include="Structure\GameObject.cs" />
     <Compile Include="Structure\EnemyNPCUnit.cs" />
-    <Compile Include="Structure\Spell.cs" />
+    <Compile Include="Structure\Gateway.cs" />
+    <Compile Include="Structure\Obstacle.cs" />
+    <Compile Include="Structure\Region.cs" />
+    <Compile Include="Structure\Projectile.cs" />
+    <Compile Include="Structure\Structure.cs" />
     <Compile Include="Structure\Unit.cs" />
     <Compile Include="UI\PaintBrush.cs" />
     <EmbeddedResource Include="GameWindow.resx">

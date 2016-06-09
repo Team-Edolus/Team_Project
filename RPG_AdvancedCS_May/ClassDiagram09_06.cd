@@ -11,7 +11,7 @@
   <Class Name="RPG_AdvancedCS_May.GameEngine.Engine" Collapsed="true">
     <Position X="13.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAQAAgAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAQAIAAA=</HashCode>
+      <HashCode>AAQAAgAAAAAAAAEAAAAgAAAAEAAAAAAAAgQAAQAMAAA=</HashCode>
       <FileName>GameEngine\Engine.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -84,12 +84,13 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="RPG_AdvancedCS_May.Structure.Spell" Collapsed="true">
+  <Class Name="RPG_AdvancedCS_May.Structure.Projectile" Collapsed="true">
     <Position X="3.25" Y="4" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Structure\Spell.cs</FileName>
+      <HashCode>AAAAAAAAAIAAAAAAACAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Structure\Projectile.cs</FileName>
     </TypeIdentifier>
+    <Lollipop Position="0.2" />
   </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.Unit" Collapsed="true">
     <Position X="0.5" Y="1.75" Width="1.5" />

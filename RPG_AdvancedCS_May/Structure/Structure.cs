@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace RPG_AdvancedCS_May.Structure
 {
-    class EnemyNPCUnit
+    class Structure : Environment
     {
         //TO DO
+        
+        public Structure(int sizeX, int sizeY, int x, int y) : base(sizeX, sizeY, x, y)
+        {
+        }
     }
 }

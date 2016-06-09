@@ -8,5 +8,7 @@ namespace RPG_AdvancedCS_May.Structure
 {
     class FriendlyNPCUnit
     {
+        //TO DO
+        //Make a questgiver.
     }
 }
