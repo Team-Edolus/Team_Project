@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\ControllerUserInput.cs" />
+    <Compile Include="GameEngine\Direction.cs" />
     <Compile Include="GameEngine\Engine.cs" />
     <Compile Include="GameWindow.cs">
       <SubType>Form</SubType>
@@ -55,13 +56,20 @@
       <DependentUpon>GameWindow.cs</DependentUpon>
     </Compile>
     <Compile Include="Interfaces\IGameObject.cs" />
+    <Compile Include="Interfaces\IMoveable.cs" />
     <Compile Include="Interfaces\IPaintInterface.cs" />
     <Compile Include="Interfaces\IRenderable.cs" />
     <Compile Include="Interfaces\IUnit.cs" />
     <Compile Include="Interfaces\IUserInputInterface.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Structure\CharacterUnit.cs" />
+    <Compile Include="Structure\Environment.cs" />
+    <Compile Include="Structure\FriendlyNPCUnit.cs" />
     <Compile Include="Structure\GameObject.cs" />
+    <Compile Include="Structure\EnemyNPCUnit.cs" />
+    <Compile Include="Structure\Spell.cs" />
+    <Compile Include="Structure\Unit.cs" />
     <Compile Include="UI\PaintBrush.cs" />
     <EmbeddedResource Include="GameWindow.resx">
       <DependentUpon>GameWindow.cs</DependentUpon>
@@ -75,7 +83,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

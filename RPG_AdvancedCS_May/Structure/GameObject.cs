@@ -8,14 +8,22 @@ using RPG_AdvancedCS_May.Interfaces;
 
 namespace RPG_AdvancedCS_May.Structure
 {
-    public class GameObject : IGameObject
+    public abstract class GameObject : IGameObject
     {
-        public int sizeX { get; set; }
+        public int SizeX { get; set; }
 
-        public int sizeY { get; set; }
+        public int SizeY { get; set; }
 
         public int X { get; set; }
 
         public int Y { get; set; }
+
+        public GameObject(int sizeX, int sizeY, int x, int y)
+        {
+            this.SizeX = sizeX;
+            this.SizeY = sizeY;
+            this.X = x;
+            this.Y = y;
+        }
     }
 }

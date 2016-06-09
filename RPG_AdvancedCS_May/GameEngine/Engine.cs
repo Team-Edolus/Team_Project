@@ -17,7 +17,14 @@ namespace RPG_AdvancedCS_May.GameEngine
         public Engine(IUserInputInterface givenController)
         {
             this.controller = givenController;
+            IntialiseCharacter();
         }
+
+        private void IntialiseCharacter()
+        {
+            throw new NotImplementedException();
+        }
+
         public void Update()
         {
 
