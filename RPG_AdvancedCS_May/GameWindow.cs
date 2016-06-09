@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using RPG_AdvancedCS_May.GameEngine;
+using RPG_AdvancedCS_May.Controllers;
+using RPG_AdvancedCS_May.Interfaces;
 
 namespace RPG_AdvancedCS_May
 {
@@ -21,7 +23,9 @@ namespace RPG_AdvancedCS_May
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            Engine engine = new Engine();
+            IUserInputInterface controller =
+                new ControllerUserInput(this);
+            Engine engine = new Engine(controller);
             Timer timer = new Timer();
             timer.Interval = 1500;
             timer.Tick += (s, args) =>

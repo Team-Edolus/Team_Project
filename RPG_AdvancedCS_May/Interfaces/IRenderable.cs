@@ -8,5 +8,6 @@ namespace RPG_AdvancedCS_May.Interfaces
 {
     interface IRenderable
     {
+
     }
 }
