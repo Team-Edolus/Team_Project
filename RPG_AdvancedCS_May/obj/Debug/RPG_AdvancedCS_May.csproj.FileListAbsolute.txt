@@ -10,3 +10,9 @@ E:\Google Drive\SU\06-Andvanced C#-May_2016\Teamwork\RPG_AdvancedCS_May\RPG_Adva
 C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.exe.config
 C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.exe
 C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.pdb
+C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.exe
+C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.pdb
+C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.csprojResolveAssemblyReference.cache
+C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.GameWindow.resources
+C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.Properties.Resources.resources
+C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.csproj.GenerateResource.Cache

@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using RPG_AdvancedCS_May.GameEngine;
+
 namespace RPG_AdvancedCS_May
 {
     public partial class GameWindow : Form
