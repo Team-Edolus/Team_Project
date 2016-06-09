@@ -8,10 +8,10 @@ namespace RPG_AdvancedCS_May.Interfaces
 {
     interface IPaintInterface
     {
-        void AddObject(IRenderable rendObject);
+        void AddObject(IRenderable renderableObject);
 
-        void RemoveObject(IRenderable rendObject);
+        void RemoveObject(IRenderable renderableObject);
 
-        void RedrawObject(IRenderable rendObject);
+        void RedrawObject(IRenderable renderableObject);
     }
 }
