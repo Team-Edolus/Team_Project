@@ -8,11 +8,9 @@ using RPG_AdvancedCS_May.Interfaces;
 
 namespace RPG_AdvancedCS_May.Structure
 {
-    class Projectile : GameObject, IMoveable
+    public abstract class Projectile : GameObject, IMoveable //TO DO
     {
-        //TO DO
-        //Spells, Arrows, etc..
-
+        //Description: Spells, Arrows, etc..
         public Projectile(int sizeX, int sizeY, int x, int y) : base(sizeX, sizeY, x, y)
         {
         }

@@ -55,21 +55,28 @@ namespace RPG_AdvancedCS_May.GameEngine
         private void MovePlayerUp()
         {
             this.Player.Direction = new Direction(0, -1);
-            this.Player.Move();
+            this.ProcessPlayerMovement();
         }
         private void MovePlayerDown()
         {
             this.Player.Direction = new Direction(0, 1);
-            this.Player.Move();
+            this.ProcessPlayerMovement();
         }
         private void MovePlayerRight()
         {
             this.Player.Direction = new Direction(1, 0);
-            this.Player.Move();
+            this.ProcessPlayerMovement();
         }
         private void MovePlayerLeft()
         {
             this.Player.Direction = new Direction(-1, 0);
+            this.ProcessPlayerMovement();
+        }
+
+        public void ProcessPlayerMovement()
+        {
+            //TO DO: Implement checks and collision detection
+            
             this.Player.Move();
         }
         public void Update()

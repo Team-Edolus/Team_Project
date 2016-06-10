@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace RPG_AdvancedCS_May.Structure
 {
-    class Gateway : Environment
+    class Gateway : Environment //TO DO
     {
-        //TO DO
-        //Used to load new regions
+        //Desc: Used to load new regions
         //Collision-free
-        //
-
         public Gateway(int sizeX, int sizeY, int x, int y) : base(sizeX, sizeY, x, y)
         {
 

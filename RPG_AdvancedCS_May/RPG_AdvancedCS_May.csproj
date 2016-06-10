@@ -62,6 +62,8 @@
     <Compile Include="Interfaces\IMoveable.cs" />
     <Compile Include="Interfaces\IPaintInterface.cs" />
     <Compile Include="Interfaces\IRenderable.cs" />
+    <Compile Include="Interfaces\ISpellCastable.cs" />
+    <Compile Include="Interfaces\ITimeoutable.cs" />
     <Compile Include="Interfaces\IUnit.cs" />
     <Compile Include="Interfaces\IUserInputInterface.cs" />
     <Compile Include="Startup.cs" />
@@ -75,6 +77,7 @@
     <Compile Include="Structure\Obstacle.cs" />
     <Compile Include="Structure\Region.cs" />
     <Compile Include="Structure\Projectile.cs" />
+    <Compile Include="Structure\Spell.cs" />
     <Compile Include="Structure\Structure.cs" />
     <Compile Include="Structure\Unit.cs" />
     <Compile Include="UI\PaintBrush.cs" />
@@ -90,7 +93,7 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="ClassDiagram09_06.cd" />
+    <None Include="ClassDiagram.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
