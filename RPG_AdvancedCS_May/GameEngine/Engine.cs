@@ -53,26 +53,38 @@ namespace RPG_AdvancedCS_May.GameEngine
                     MovePlayerLeft();
                 };
         }
-
+        //The if statements in the following four methods prevent the player from leaving the screen window
         private void MovePlayerUp()
         {
             this.Player.Direction = new Direction(0, -1);
-            this.ProcessPlayerMovement();
+            if (!(Player.Y == 0))
+            {
+                this.ProcessPlayerMovement();
+            }
         }
         private void MovePlayerDown()
         {
             this.Player.Direction = new Direction(0, 1);
+            if (!(Player.Y >= 681 - Player.SizeY))
+            {
             this.ProcessPlayerMovement();
+            }
         }
         private void MovePlayerRight()
         {
             this.Player.Direction = new Direction(1, 0);
+            if (!(Player.X >= 1264 - Player.SizeX))
+            {
             this.ProcessPlayerMovement();
+            }
         }
         private void MovePlayerLeft()
         {
             this.Player.Direction = new Direction(-1, 0);
-            this.ProcessPlayerMovement();
+            if (!(Player.X == 0))
+            {
+                this.ProcessPlayerMovement();
+            }
         }
 
         public void ProcessPlayerMovement()
@@ -80,6 +92,7 @@ namespace RPG_AdvancedCS_May.GameEngine
             //TO DO: Implement checks and collision detection
             
             this.Player.Move();
+            
         }
         public void Update()
         {
