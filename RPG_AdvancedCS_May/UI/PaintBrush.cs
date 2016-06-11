@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 using RPG_AdvancedCS_May.Interfaces;
 using RPG_AdvancedCS_May.Graphics;
+using RPG_AdvancedCS_May.Structure;
 
 namespace RPG_AdvancedCS_May.UI
 {
@@ -98,10 +99,14 @@ namespace RPG_AdvancedCS_May.UI
             progressBar.Tag = unit;
             progressBars.Add(progressBar);
             //test
-            progressBar.BackColor = Color.LimeGreen;
-            progressBar.BackColor = Color.LimeGreen;
+            //progressBar.BackColor = Color.LimeGreen;
+            //progressBar.BackColor = Color.LimeGreen;
             //progressBar.ForeColor = Color.Red;
             //progressBar.BackColor = Color.Red;
+            if (unit is EnemyNPCUnit)
+            {
+            progressBar.SetState(2);
+            }
             //endTest
             this.gameWindow.Controls.Add(progressBar);
         }

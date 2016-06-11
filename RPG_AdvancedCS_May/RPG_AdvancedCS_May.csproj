@@ -82,6 +82,7 @@
     <Compile Include="Structure\Spell.cs" />
     <Compile Include="Structure\Structure.cs" />
     <Compile Include="Structure\Unit.cs" />
+    <Compile Include="UI\ModifyProgressBarColor.cs" />
     <Compile Include="UI\PaintBrush.cs" />
     <EmbeddedResource Include="GameWindow.resx">
       <DependentUpon>GameWindow.cs</DependentUpon>

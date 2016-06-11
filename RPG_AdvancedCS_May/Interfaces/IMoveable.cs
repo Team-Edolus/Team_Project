@@ -6,7 +6,7 @@ using RPG_AdvancedCS_May.GameEngine;
 
 namespace RPG_AdvancedCS_May.Interfaces
 {
-    interface IMoveable
+    public interface IMoveable
     {
         Direction Direction { get; set; }
         int MovementSpeed { get; set; }
