@@ -14,7 +14,9 @@ namespace RPG_AdvancedCS_May
         [STAThread]
         public static void Main()
         {
-            Application.EnableVisualStyles();
+            //test
+            //Application.EnableVisualStyles();
+            //endTest
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new GameWindow());
         }

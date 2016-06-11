@@ -56,9 +56,11 @@
     <Compile Include="GameWindow.Designer.cs">
       <DependentUpon>GameWindow.cs</DependentUpon>
     </Compile>
+    <Compile Include="Graphics\Background.cs" />
     <Compile Include="Graphics\Images.cs" />
     <Compile Include="Graphics\SpriteType.cs" />
     <Compile Include="Interfaces\IGameObject.cs" />
+    <Compile Include="Interfaces\IMeleeAttacking.cs" />
     <Compile Include="Interfaces\IMoveable.cs" />
     <Compile Include="Interfaces\IPaintInterface.cs" />
     <Compile Include="Interfaces\IRenderable.cs" />
@@ -94,6 +96,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -109,6 +112,8 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <Content Include="Resources\background_720p.png" />
+    <Content Include="Resources\Boar_39x24.png" />
     <Content Include="Resources\Character_16x24.png" />
     <Content Include="Resources\guy.png" />
   </ItemGroup>

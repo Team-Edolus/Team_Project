@@ -16,9 +16,11 @@ namespace RPG_AdvancedCS_May.UI
         private const int ProgressbarOffsetX = -3;
         private  const int ProgressbarOffsetY = -10;
 
-        private Image characterImage;
+        //-------------------------------------
+        private Image CharacterImage, BoarImage, BackgroundImage;
+        //-------------------------------------
 
-        //test
+        //private PictureBox Background;
         private Form gameWindow;
         private List<PictureBox> pictureBoxes;
         private List<ProgressBar> progressBars;
@@ -27,9 +29,29 @@ namespace RPG_AdvancedCS_May.UI
         {
             LoadResources();
             this.gameWindow = form;
+            this.gameWindow.BackgroundImage = Image.FromFile(Images.BackGroundImagePath);
             this.pictureBoxes = new List<PictureBox>();
             this.progressBars = new List<ProgressBar>();
         }
+
+        //private void InitialiseBackground()
+        //{
+        //    var backgr = new Background();
+        //    var spriteImage = GetSpriteImage(backgr);
+        //    var picBox = new PictureBox
+        //    {
+        //        BackColor = Color.Transparent,
+        //        Image = spriteImage,
+        //        Location = new Point(backgr.X, backgr.Y),
+        //        Size = new Size(backgr.SizeX, backgr.SizeY),
+        //        Tag = backgr,
+        //        Parent = this.gameWindow
+        //    };
+        //    this.Background = picBox;
+        //    this.pictureBoxes.Add(picBox);
+        //    this.gameWindow.Controls.Add(picBox);
+        //}
+
         //---------
         public void AddObject(IRenderable renderableObject)
         {
@@ -75,6 +97,12 @@ namespace RPG_AdvancedCS_May.UI
             progressBar.Value = unit.CurrentHP;
             progressBar.Tag = unit;
             progressBars.Add(progressBar);
+            //test
+            progressBar.BackColor = Color.LimeGreen;
+            progressBar.BackColor = Color.LimeGreen;
+            //progressBar.ForeColor = Color.Red;
+            //progressBar.BackColor = Color.Red;
+            //endTest
             this.gameWindow.Controls.Add(progressBar);
         }
 
@@ -84,12 +112,17 @@ namespace RPG_AdvancedCS_May.UI
             PictureBox picBox = new PictureBox();
             picBox.BackColor = Color.Transparent;
             picBox.Image = spriteImage;
-            picBox.Parent = this.gameWindow;
             picBox.Location = new Point(renderableObject.X, renderableObject.Y);
             picBox.Size = new Size(renderableObject.SizeX, renderableObject.SizeY);
             picBox.Tag = renderableObject;
+            picBox.Parent = this.gameWindow;
             this.pictureBoxes.Add(picBox);
             this.gameWindow.Controls.Add(picBox);
+            //test
+            //picBox.ForeColor = Color.Transparent;
+            //picBox.BackColor = Color.Transparent;
+            //picBox.Parent = this.Background;
+            //endTest
         }
 
         private void SetProgressBarLocation(IUnit unit, ProgressBar progressBar)
@@ -103,10 +136,14 @@ namespace RPG_AdvancedCS_May.UI
             switch (renderableObject.SpriteType)
             {
                 case SpriteType.Char1:
-                    image = this.characterImage;
+                    image = this.CharacterImage;
+                    break;
+                case SpriteType.Boar: image = this.BoarImage;
+                    break;
+                case SpriteType.Background: image = this.BackgroundImage;
                     break;
                 default:
-                    image = new PictureBox().Image; //TO DO: Set To Fully Transparent Image!
+                    image = new PictureBox().Image;
                     break;
             }
             return image;
@@ -124,7 +161,9 @@ namespace RPG_AdvancedCS_May.UI
 
         public void LoadResources()
         {
-            this.characterImage = Image.FromFile(Images.Character1ImagePath);
+            this.CharacterImage = Image.FromFile(Images.Character1ImagePath);
+            this.BoarImage = Image.FromFile(Images.BoarImagePath);
+            this.BackgroundImage = Image.FromFile(Images.BackGroundImagePath);
         }
         
     }

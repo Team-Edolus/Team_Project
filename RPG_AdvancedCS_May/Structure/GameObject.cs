@@ -18,7 +18,7 @@ namespace RPG_AdvancedCS_May.Structure
 
         public int Y { get; set; }
 
-        public GameObject(int sizeX, int sizeY, int x, int y)
+        protected GameObject(int sizeX, int sizeY, int x, int y)
         {
             this.SizeX = sizeX;
             this.SizeY = sizeY;

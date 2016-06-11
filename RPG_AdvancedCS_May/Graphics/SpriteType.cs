@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace RPG_AdvancedCS_May.Graphics
 {
     public enum SpriteType
     {
         Char1,
-        Char2
+        Char2,
+        Boar,
+        Background
     }
 }

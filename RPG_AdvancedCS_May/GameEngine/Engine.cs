@@ -28,8 +28,10 @@ namespace RPG_AdvancedCS_May.GameEngine
         
         private void IntialisePlayer()
         {
-            this.Player = new CharacterUnit(50, 50, 100, 100, 250, 250, 10, 80, 3, SpriteType.Char1);
+            this.Player = new CharacterUnit(16, 24, 100, 100, 250, 250, 10, 80, 4, SpriteType.Char1);
             Painter.AddObject(Player);
+            Painter.AddObject(new EnemyNPCUnit(39, 24, 200, 200, 50, 50, 10, 5, 3, SpriteType.Boar));
+            Painter.AddObject(new Background());
         }
 
         private void SubscribeToController(IUserInputInterface userInputInterface)
