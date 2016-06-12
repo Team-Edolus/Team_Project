@@ -20,7 +20,7 @@ namespace RPG_AdvancedCS_May.Structure
 
         public MeleeAbility MeleeAttack()
         {
-            MessageBox.Show("asdasdas");
+            MessageBox.Show("MeleeAttack");
             return new BasicAttack(5,5,5,5);
         }
     }

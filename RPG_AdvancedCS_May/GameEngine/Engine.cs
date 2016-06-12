@@ -12,7 +12,7 @@ using RPG_AdvancedCS_May.Structure;
 
 namespace RPG_AdvancedCS_May.GameEngine
 {
-    class Engine
+    public class Engine
     {
         private IUserInputInterface controller;
         private IPaintInterface Painter;
@@ -49,13 +49,16 @@ namespace RPG_AdvancedCS_May.GameEngine
                     MovePlayerRight();
                 };
             controller.OnLeftPressed += (sender, args) =>
-            {
-                MovePlayerLeft();
-            };
+                {
+                    MovePlayerLeft();
+                };
             controller.OnLeftMouseClick += (sender, args) =>
             {
                 var abilityArgs = args as AbilityEventArgs;
-                UsePlayerAbility(abilityArgs.MouseX, abilityArgs.MouseY);
+                if (abilityArgs != null)
+                {
+                    UsePlayerAbility(abilityArgs.MouseX, abilityArgs.MouseY);
+                }
             };
         }
 
@@ -105,10 +108,9 @@ namespace RPG_AdvancedCS_May.GameEngine
 
         private void UsePlayerAbility(int x, int y)
         {
-            MessageBox.Show("asd");
             if (Player is Warrior)
             {
-                (Player as Warrior).MeleeAttack();
+                ((Warrior)Player).MeleeAttack();
             }
         }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPG_AdvancedCS_May.GameEngine
 {
-    class CollisionHandler
+    public class CollisionHandler
     {
         //TO DO
     }

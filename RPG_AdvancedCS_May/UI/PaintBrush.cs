@@ -10,7 +10,7 @@ using RPG_AdvancedCS_May.Structure;
 
 namespace RPG_AdvancedCS_May.UI
 {
-    class PaintBrush : IPaintInterface
+    public class PaintBrush : IPaintInterface
     {
         private const int ProgrssBarSizeX = 30;
         private const int ProgressBarSizeY = 8;
@@ -25,14 +25,17 @@ namespace RPG_AdvancedCS_May.UI
         private Form gameWindow;
         private List<PictureBox> pictureBoxes;
         private List<ProgressBar> progressBars;
+        private IUserInputInterface Controller;
 
-        public PaintBrush(Form form)
+        public PaintBrush(Form form, IUserInputInterface controller)
         {
             LoadResources();
             this.gameWindow = form;
             this.gameWindow.BackgroundImage = Image.FromFile(Images.BackGroundImagePath);
             this.pictureBoxes = new List<PictureBox>();
             this.progressBars = new List<ProgressBar>();
+            //
+            this.Controller = controller;
         }
 
         //private void InitialiseBackground()
@@ -99,10 +102,6 @@ namespace RPG_AdvancedCS_May.UI
             progressBar.Tag = unit;
             progressBars.Add(progressBar);
             //test
-            //progressBar.BackColor = Color.LimeGreen;
-            //progressBar.BackColor = Color.LimeGreen;
-            //progressBar.ForeColor = Color.Red;
-            //progressBar.BackColor = Color.Red;
             if (unit is EnemyNPCUnit)
             {
             progressBar.SetState(2);
@@ -114,21 +113,28 @@ namespace RPG_AdvancedCS_May.UI
         private void CreatepictureBox(IRenderable renderableObject)
         {
             var spriteImage = GetSpriteImage(renderableObject);
-            var picBox = new PictureBox
+            //var picBox = new PictureBox
+            //{
+            //    BackColor = Color.Transparent,
+            //    Image = spriteImage,
+            //    Location = new Point(renderableObject.X, renderableObject.Y),
+            //    Size = new Size(renderableObject.SizeX, renderableObject.SizeY),
+            //    Tag = renderableObject,
+            //    Parent = this.gameWindow
+            //};
+            var picBox = new CustomPictureBox
             {
                 BackColor = Color.Transparent,
                 Image = spriteImage,
                 Location = new Point(renderableObject.X, renderableObject.Y),
                 Size = new Size(renderableObject.SizeX, renderableObject.SizeY),
-                Tag = renderableObject,
-                Parent = this.gameWindow
+                Parent = this.gameWindow,
+                Tag = new CustomPicBoxTag(renderableObject, this.Controller)
             };
             this.pictureBoxes.Add(picBox);
             this.gameWindow.Controls.Add(picBox);
             //test
-            //picBox.ForeColor = Color.Transparent;
             //picBox.BackColor = Color.Transparent;
-            //picBox.Parent = this.Background;
             //endTest
         }
 
@@ -158,14 +164,25 @@ namespace RPG_AdvancedCS_May.UI
         
         private ProgressBar GetProgressbarByObject(IUnit unit)
         {
-            return this.progressBars.First(p => p.Tag == unit);
+            return this.progressBars.First(prog => prog.Tag == unit);
         }
 
         private PictureBox GetPictureBoxByObject(IRenderable renderableObject)
         {
-            return this.pictureBoxes.First(p => p.Tag == renderableObject);
+            //return this.pictureBoxes.First(p => p.Tag == renderableObject);
+            return this.pictureBoxes.First(pic =>
+            {
+                var customTag = (pic.Tag as CustomPicBoxTag);
+                bool result = false;
+                if (customTag != null)
+                {
+                    result = customTag.RendObject == renderableObject;
+                }
+                return result;
+            });
         }
 
+        //------------
         public void LoadResources()
         {
             this.CharacterImage = Image.FromFile(Images.Character1ImagePath);

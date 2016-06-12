@@ -88,6 +88,10 @@
     <Compile Include="Structure\Structure.cs" />
     <Compile Include="Structure\Unit.cs" />
     <Compile Include="Structure\Warrior.cs" />
+    <Compile Include="UI\CustomPicBoxTag.cs" />
+    <Compile Include="UI\CustomPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="UI\ModifyProgressBarColor.cs" />
     <Compile Include="UI\PaintBrush.cs" />
     <EmbeddedResource Include="GameWindow.resx">

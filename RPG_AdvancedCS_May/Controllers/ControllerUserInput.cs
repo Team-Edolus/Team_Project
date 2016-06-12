@@ -6,7 +6,7 @@ using RPG_AdvancedCS_May.GameEngine;
 
 namespace RPG_AdvancedCS_May.Controllers
 {
-    class ControllerUserInput : IUserInputInterface
+    public class ControllerUserInput : IUserInputInterface
     {
         public event EventHandler OnRightPressed;
         public event EventHandler OnLeftPressed;
@@ -20,13 +20,10 @@ namespace RPG_AdvancedCS_May.Controllers
             form.KeyDown += OnKeyDown;
             form.MouseClick += OnMouseClick;
         }
-
-        private void OnMouseClick(object sender, MouseEventArgs e)
+        public void OnMouseClick(object sender, MouseEventArgs e)
         {
-            MessageBox.Show("asd");
             if (e.Button == MouseButtons.Left)
             {
-                MessageBox.Show("asd");
                 this.OnLeftMouseClick?.Invoke(this, new AbilityEventArgs(e.X, e.Y));
             }
         }
