@@ -8,16 +8,11 @@ using RPG_AdvancedCS_May.Graphics;
 
 namespace RPG_AdvancedCS_May.Structure
 {
-    class CharacterUnit : Unit, IMeleeAttacking
+    public abstract class CharacterUnit : Unit
     {
-        public CharacterUnit(int sizeX, int sizeY, int x, int y, int currentHp, int maxHp, int attackPoints,
+        protected CharacterUnit(int sizeX, int sizeY, int x, int y, int currentHp, int maxHp, int attackPoints,
             int defensePoints, int movementSpeed, SpriteType spriteType)
             : base(sizeX, sizeY, x, y, currentHp, maxHp, attackPoints, defensePoints, movementSpeed, spriteType)
-        {
-
-        }
-
-        public void MeleeAttack()
         {
 
         }

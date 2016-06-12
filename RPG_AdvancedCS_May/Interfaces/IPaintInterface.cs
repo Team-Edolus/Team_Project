@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPG_AdvancedCS_May.Interfaces
 {
-    interface IPaintInterface
+    public interface IPaintInterface
     {
         void AddObject(IRenderable renderableObject);
 

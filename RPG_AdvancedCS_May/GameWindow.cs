@@ -26,9 +26,8 @@ namespace RPG_AdvancedCS_May
         {
             IUserInputInterface controller = new ControllerUserInput(this);
             IPaintInterface painter = new PaintBrush(this);
-            Engine engine = new Engine(controller, painter);
-            Timer timer = new Timer();
-            timer.Interval = 30;
+            var engine = new Engine(controller, painter);
+            var timer = new Timer {Interval = 30};
             timer.Tick += (s, args) =>
             {
                 engine.Update();

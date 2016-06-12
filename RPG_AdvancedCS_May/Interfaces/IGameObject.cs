@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPG_AdvancedCS_May.Interfaces
 {
-    interface IGameObject
+    public interface IGameObject
     {
         int SizeX { get; set; }
         int SizeY { get; set; }

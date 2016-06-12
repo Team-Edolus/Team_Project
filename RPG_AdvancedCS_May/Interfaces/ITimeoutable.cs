@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPG_AdvancedCS_May.Interfaces
 {
-    interface ITimeoutable
+    public interface ITimeoutable
     {
         int MaxLifespanInMS { get; set; }
         int CurrentLifespanInMS { get; set; }

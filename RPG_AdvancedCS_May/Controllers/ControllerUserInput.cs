@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 using RPG_AdvancedCS_May.Interfaces;
+using RPG_AdvancedCS_May.GameEngine;
 
 namespace RPG_AdvancedCS_May.Controllers
 {
@@ -16,11 +13,22 @@ namespace RPG_AdvancedCS_May.Controllers
         public event EventHandler OnUpPressed;
         public event EventHandler OnDownPressed;
 
-        public event EventHandler OnSpellOnePressed;
-
+        public event EventHandler OnLeftMouseClick;
+        
         public ControllerUserInput(Form form)
         {
             form.KeyDown += OnKeyDown;
+            form.MouseClick += OnMouseClick;
+        }
+
+        private void OnMouseClick(object sender, MouseEventArgs e)
+        {
+            MessageBox.Show("asd");
+            if (e.Button == MouseButtons.Left)
+            {
+                MessageBox.Show("asd");
+                this.OnLeftMouseClick?.Invoke(this, new AbilityEventArgs(e.X, e.Y));
+            }
         }
 
         private void OnKeyDown(object sender, KeyEventArgs e)

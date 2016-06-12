@@ -13,6 +13,6 @@ namespace RPG_AdvancedCS_May.Interfaces
         event EventHandler OnUpPressed;
         event EventHandler OnDownPressed;
 
-        event EventHandler OnSpellOnePressed;
+        event EventHandler OnLeftMouseClick;
     }
 }

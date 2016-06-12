@@ -113,14 +113,16 @@ namespace RPG_AdvancedCS_May.UI
 
         private void CreatepictureBox(IRenderable renderableObject)
         {
-            Image spriteImage = GetSpriteImage(renderableObject);
-            PictureBox picBox = new PictureBox();
-            picBox.BackColor = Color.Transparent;
-            picBox.Image = spriteImage;
-            picBox.Location = new Point(renderableObject.X, renderableObject.Y);
-            picBox.Size = new Size(renderableObject.SizeX, renderableObject.SizeY);
-            picBox.Tag = renderableObject;
-            picBox.Parent = this.gameWindow;
+            var spriteImage = GetSpriteImage(renderableObject);
+            var picBox = new PictureBox
+            {
+                BackColor = Color.Transparent,
+                Image = spriteImage,
+                Location = new Point(renderableObject.X, renderableObject.Y),
+                Size = new Size(renderableObject.SizeX, renderableObject.SizeY),
+                Tag = renderableObject,
+                Parent = this.gameWindow
+            };
             this.pictureBoxes.Add(picBox);
             this.gameWindow.Controls.Add(picBox);
             //test

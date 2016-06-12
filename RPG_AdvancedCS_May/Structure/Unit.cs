@@ -42,6 +42,5 @@ namespace RPG_AdvancedCS_May.Structure
             this.X += this.MovementSpeed*this.Direction.DirX;
             this.Y += this.MovementSpeed*this.Direction.DirY; 
         }
-
     }
 }

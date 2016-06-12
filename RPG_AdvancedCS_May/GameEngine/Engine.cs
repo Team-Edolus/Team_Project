@@ -22,13 +22,13 @@ namespace RPG_AdvancedCS_May.GameEngine
         {
             this.controller = givenController;
             this.Painter = painter;
-            IntialisePlayer();
             SubscribeToController(controller);
+            IntialisePlayer();
         }
-        
+
         private void IntialisePlayer()
         {
-            this.Player = new CharacterUnit(16, 24, 100, 100, 250, 250, 10, 80, 4, SpriteType.Char1);
+            this.Player = new Warrior(16, 24, 200, 100, 250, 250, 10, 80, 4, SpriteType.Char1);
             Painter.AddObject(Player);
             Painter.AddObject(new EnemyNPCUnit(39, 24, 200, 200, 50, 50, 10, 5, 3, SpriteType.Boar));
             Painter.AddObject(new Background());
@@ -49,15 +49,22 @@ namespace RPG_AdvancedCS_May.GameEngine
                     MovePlayerRight();
                 };
             controller.OnLeftPressed += (sender, args) =>
-                {
-                    MovePlayerLeft();
-                };
+            {
+                MovePlayerLeft();
+            };
+            controller.OnLeftMouseClick += (sender, args) =>
+            {
+                var abilityArgs = args as AbilityEventArgs;
+                UsePlayerAbility(abilityArgs.MouseX, abilityArgs.MouseY);
+            };
         }
+
+
         //The if statements in the following four methods prevent the player from leaving the screen window
         private void MovePlayerUp()
         {
             this.Player.Direction = new Direction(0, -1);
-            if (!(Player.Y == 0))
+            if (Player.Y > 0)
             {
                 this.ProcessPlayerMovement();
             }
@@ -65,23 +72,26 @@ namespace RPG_AdvancedCS_May.GameEngine
         private void MovePlayerDown()
         {
             this.Player.Direction = new Direction(0, 1);
-            if (!(Player.Y >= 681 - Player.SizeY))
+            if (Player.Y + Player.SizeY < 680)
             {
-            this.ProcessPlayerMovement();
+                this.ProcessPlayerMovement();
             }
         }
         private void MovePlayerRight()
         {
             this.Player.Direction = new Direction(1, 0);
-            if (!(Player.X >= 1264 - Player.SizeX))
+            if (Player.X + Player.Y < 1350)
+            //if (Player.X < 1280 - Player.SizeX)
+            //if (Player.X < 1266)
+            //if(Player.X + Player.SizeX < 1280)
             {
-            this.ProcessPlayerMovement();
+                this.ProcessPlayerMovement();
             }
         }
         private void MovePlayerLeft()
         {
             this.Player.Direction = new Direction(-1, 0);
-            if (!(Player.X == 0))
+            if (Player.X > 0)
             {
                 this.ProcessPlayerMovement();
             }
@@ -90,10 +100,23 @@ namespace RPG_AdvancedCS_May.GameEngine
         public void ProcessPlayerMovement()
         {
             //TO DO: Implement checks and collision detection
-            
             this.Player.Move();
-            
         }
+
+        private void UsePlayerAbility(int x, int y)
+        {
+            MessageBox.Show("asd");
+            if (Player is Warrior)
+            {
+                (Player as Warrior).MeleeAttack();
+            }
+        }
+
+        public void ProcessProjectileMovement(IMoveable movableObject)
+        {
+            throw new NotImplementedException();
+        }
+        //----------------------------------------------------------------------------------------\\
         public void Update()
         {
             this.Painter.RedrawObject(Player);

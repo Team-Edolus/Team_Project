@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPG_AdvancedCS_May.Interfaces
 {
-    interface IUnit : IGameObject
+    public interface IUnit : IGameObject
     {
         int CurrentHP { get; set; }
         int MaxHP { get; set; }

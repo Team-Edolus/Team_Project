@@ -6,20 +6,22 @@ using System.Threading.Tasks;
 using RPG_AdvancedCS_May.Graphics;
 using RPG_AdvancedCS_May.Interfaces;
 
+using System.Windows.Forms;
+
 namespace RPG_AdvancedCS_May.Structure
 {
-    class EnemyNPCUnit : Unit, IMeleeAttacking //TO DO
+    public class Warrior : CharacterUnit, IMeleeAttacking
     {
-        public EnemyNPCUnit(int sizeX, int sizeY, int x, int y, int currentHp, int maxHp, 
+        public Warrior(int sizeX, int sizeY, int x, int y, int currentHp, int maxHp, 
             int attackPoints, int defensePoints, int movementSpeed, SpriteType spriteType) 
             : base(sizeX, sizeY, x, y, currentHp, maxHp, attackPoints, defensePoints, movementSpeed, spriteType)
         {
-
         }
 
         public MeleeAbility MeleeAttack()
         {
-            throw new NotImplementedException();
+            MessageBox.Show("asdasdas");
+            return new BasicAttack(5,5,5,5);
         }
     }
 }
