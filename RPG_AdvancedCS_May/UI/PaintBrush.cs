@@ -34,27 +34,8 @@ namespace RPG_AdvancedCS_May.UI
             this.gameWindow.BackgroundImage = Image.FromFile(Images.BackGroundImagePath);
             this.pictureBoxes = new List<PictureBox>();
             this.progressBars = new List<ProgressBar>();
-            //
             this.Controller = controller;
         }
-
-        //private void InitialiseBackground()
-        //{
-        //    var backgr = new Background();
-        //    var spriteImage = GetSpriteImage(backgr);
-        //    var picBox = new PictureBox
-        //    {
-        //        BackColor = Color.Transparent,
-        //        Image = spriteImage,
-        //        Location = new Point(backgr.X, backgr.Y),
-        //        Size = new Size(backgr.SizeX, backgr.SizeY),
-        //        Tag = backgr,
-        //        Parent = this.gameWindow
-        //    };
-        //    this.Background = picBox;
-        //    this.pictureBoxes.Add(picBox);
-        //    this.gameWindow.Controls.Add(picBox);
-        //}
 
         //---------
         public void AddObject(IRenderable renderableObject)
@@ -94,13 +75,15 @@ namespace RPG_AdvancedCS_May.UI
 
         private void CreateProgressBar(IUnit unit)
         {
-            ProgressBar progressBar = new ProgressBar();
-            progressBar.Size = new Size(ProgrssBarSizeX, ProgressBarSizeY);
-            this.SetProgressBarLocation(unit, progressBar);
-            progressBar.Maximum = unit.MaxHP;
-            progressBar.Value = unit.CurrentHP;
-            progressBar.Tag = unit;
+            var progressBar = new CustomProgressBar
+            {
+                Size = new Size(ProgrssBarSizeX, ProgressBarSizeY),
+                Maximum = unit.MaxHP,
+                Value = unit.CurrentHP,
+                Tag = new CustomProgBarTag(unit, this.Controller)
+            };
             progressBars.Add(progressBar);
+            this.SetProgressBarLocation(unit, progressBar);
             //test
             if (unit is EnemyNPCUnit)
             {
@@ -113,15 +96,6 @@ namespace RPG_AdvancedCS_May.UI
         private void CreatepictureBox(IRenderable renderableObject)
         {
             var spriteImage = GetSpriteImage(renderableObject);
-            //var picBox = new PictureBox
-            //{
-            //    BackColor = Color.Transparent,
-            //    Image = spriteImage,
-            //    Location = new Point(renderableObject.X, renderableObject.Y),
-            //    Size = new Size(renderableObject.SizeX, renderableObject.SizeY),
-            //    Tag = renderableObject,
-            //    Parent = this.gameWindow
-            //};
             var picBox = new CustomPictureBox
             {
                 BackColor = Color.Transparent,
@@ -164,7 +138,17 @@ namespace RPG_AdvancedCS_May.UI
         
         private ProgressBar GetProgressbarByObject(IUnit unit)
         {
-            return this.progressBars.First(prog => prog.Tag == unit);
+            //return this.progressBars.First(prog => prog.Tag == unit);
+            return this.progressBars.First(prog =>
+            {
+                var customTag = (prog.Tag as CustomProgBarTag);
+                bool result = false;
+                if (customTag != null)
+                {
+                    result = customTag.RendObject == unit;
+                }
+                return result;
+            });
         }
 
         private PictureBox GetPictureBoxByObject(IRenderable renderableObject)
@@ -181,6 +165,24 @@ namespace RPG_AdvancedCS_May.UI
                 return result;
             });
         }
+
+        //private void InitialiseBackground()
+        //{
+        //    var backgr = new Background();
+        //    var spriteImage = GetSpriteImage(backgr);
+        //    var picBox = new PictureBox
+        //    {
+        //        BackColor = Color.Transparent,
+        //        Image = spriteImage,
+        //        Location = new Point(backgr.X, backgr.Y),
+        //        Size = new Size(backgr.SizeX, backgr.SizeY),
+        //        Tag = backgr,
+        //        Parent = this.gameWindow
+        //    };
+        //    this.Background = picBox;
+        //    this.pictureBoxes.Add(picBox);
+        //    this.gameWindow.Controls.Add(picBox);
+        //}
 
         //------------
         public void LoadResources()

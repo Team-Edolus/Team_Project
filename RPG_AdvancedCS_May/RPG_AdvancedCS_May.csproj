@@ -50,6 +50,7 @@
     <Compile Include="GameEngine\AbilityEventArgs.cs" />
     <Compile Include="GameEngine\CollisionHandler.cs" />
     <Compile Include="GameEngine\Direction.cs" />
+    <Compile Include="GameEngine\DirectionEnum.cs" />
     <Compile Include="GameEngine\Engine.cs" />
     <Compile Include="GameWindow.cs">
       <SubType>Form</SubType>
@@ -60,6 +61,7 @@
     <Compile Include="Graphics\Background.cs" />
     <Compile Include="Graphics\Images.cs" />
     <Compile Include="Graphics\SpriteType.cs" />
+    <Compile Include="Interfaces\IAbilityUseable.cs" />
     <Compile Include="Interfaces\IGameObject.cs" />
     <Compile Include="Interfaces\IMeleeAttacking.cs" />
     <Compile Include="Interfaces\IMoveable.cs" />
@@ -88,8 +90,12 @@
     <Compile Include="Structure\Structure.cs" />
     <Compile Include="Structure\Unit.cs" />
     <Compile Include="Structure\Warrior.cs" />
-    <Compile Include="UI\CustomPicBoxTag.cs" />
-    <Compile Include="UI\CustomPictureBox.cs">
+    <Compile Include="UI\CustomControls\CustomPicBoxTag.cs" />
+    <Compile Include="UI\CustomControls\CustomPictureBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UI\CustomControls\CustomProgBarTag.cs" />
+    <Compile Include="UI\CustomControls\CustomProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="UI\ModifyProgressBarColor.cs" />

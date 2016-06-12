@@ -110,7 +110,7 @@ namespace RPG_AdvancedCS_May.GameEngine
         {
             if (Player is Warrior)
             {
-                ((Warrior)Player).MeleeAttack();
+                ((Warrior)Player).MeleeAttack(x, y);
             }
         }
 

@@ -4,6 +4,6 @@ namespace RPG_AdvancedCS_May.Interfaces
 {
     public interface IMeleeAttacking
     {
-        MeleeAbility MeleeAttack();
+        MeleeAbility MeleeAttack(int mouseX, int mouseY);
     }
 }

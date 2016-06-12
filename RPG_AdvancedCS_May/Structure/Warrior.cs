@@ -18,9 +18,9 @@ namespace RPG_AdvancedCS_May.Structure
         {
         }
 
-        public MeleeAbility MeleeAttack()
+        public MeleeAbility MeleeAttack(int mouseX, int mouseY)
         {
-            MessageBox.Show("MeleeAttack");
+            MessageBox.Show($"MeleeAttack: {mouseX}-{mouseY} \n {this.DetermineAbilityDirection(mouseX, mouseY).ToString()}");
             return new BasicAttack(5,5,5,5);
         }
     }

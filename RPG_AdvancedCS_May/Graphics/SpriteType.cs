@@ -1,5 +1,4 @@
-﻿
-namespace RPG_AdvancedCS_May.Graphics
+﻿namespace RPG_AdvancedCS_May.Graphics
 {
     public enum SpriteType
     {
