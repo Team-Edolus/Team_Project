@@ -30,7 +30,7 @@ namespace RPG_AdvancedCS_May.GameEngine
         {
             this.Player = new Warrior(16, 24, 200, 100, 250, 250, 10, 80, 4, SpriteType.Char1);
             Painter.AddObject(Player);
-            Painter.AddObject(new EnemyNPCUnit(39, 24, 200, 200, 50, 50, 10, 5, 3, SpriteType.Boar));
+            Painter.AddObject(new EnemyNPCUnit(39, 24, 200, 200, 50, 50, 10, 5, 3, SpriteType.Boar)); 
             Painter.AddObject(new Background());
         }
 
