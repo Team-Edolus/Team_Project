@@ -94,7 +94,7 @@ namespace RPG_AdvancedCS_May.GameEngine
         private void MovePlayerDown()
         {
             this._player.Direction = new Direction(0, 1);
-            if (_player.Y + _player.SizeY < 680)
+            if (_player.Y + _player.SizeY < 485)
             {
                 this.ProcessPlayerMovement();
             }
@@ -102,7 +102,7 @@ namespace RPG_AdvancedCS_May.GameEngine
         private void MovePlayerRight()
         {
             this._player.Direction = new Direction(1, 0);
-            if (_player.X + _player.Y < 1350)
+            if (_player.X < 890)
             //if (_player.X < 1280 - _player.SizeX)
             //if (_player.X < 1266)
             //if(_player.X + _player.SizeX < 1280)
