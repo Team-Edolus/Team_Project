@@ -18,3 +18,6 @@ C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_
 C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.InitialScreen.resources
 C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.Properties.Resources.resources
 C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.csproj.GenerateResource.Cache
+C:\Users\User\Desktop\Game2\trunk\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.exe.config
+C:\Users\User\Desktop\Game2\trunk\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.exe
+C:\Users\User\Desktop\Game2\trunk\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.pdb
