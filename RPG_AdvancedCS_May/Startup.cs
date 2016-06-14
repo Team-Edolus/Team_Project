@@ -16,7 +16,7 @@ namespace RPG_AdvancedCS_May
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new GameWindow());
+            Application.Run(new InitialScreen());
         }
     }
 }
