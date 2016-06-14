@@ -71,6 +71,23 @@ namespace RPG_AdvancedCS_May.UI
                 progressBar.Value = unit.CurrentHP;
             }
         }
+
+        public void SetBackground(IRenderable renderableObject)
+        {
+            var spriteImage = GetSpriteImage(renderableObject);
+            var picBox = new CustomPictureBox
+            {
+                BackColor = Color.Transparent,
+                Image = spriteImage,
+                Location = new Point(renderableObject.X, renderableObject.Y),
+                Size = new Size(renderableObject.SizeX, renderableObject.SizeY),
+                Parent = this.gameWindow,
+                Tag = new CustomPicBoxTag(renderableObject, this.Controller)
+            };
+            this.pictureBoxes.Add(picBox);
+            this.gameWindow.Controls.Add(picBox);
+        }
+
         //---------
 
         private void CreateProgressBar(IUnit unit)
@@ -89,8 +106,11 @@ namespace RPG_AdvancedCS_May.UI
             {
             progressBar.SetState(2);
             }
+            //
             //endTest
             this.gameWindow.Controls.Add(progressBar);
+            //
+            progressBar.BringToFront();
         }
 
         private void CreatepictureBox(IRenderable renderableObject)
@@ -108,6 +128,7 @@ namespace RPG_AdvancedCS_May.UI
             this.pictureBoxes.Add(picBox);
             this.gameWindow.Controls.Add(picBox);
             //test
+            picBox.BringToFront();
             //picBox.BackColor = Color.Transparent;
             //endTest
         }
@@ -165,24 +186,6 @@ namespace RPG_AdvancedCS_May.UI
                 return result;
             });
         }
-
-        //private void InitialiseBackground()
-        //{
-        //    var backgr = new Background();
-        //    var spriteImage = GetSpriteImage(backgr);
-        //    var picBox = new PictureBox
-        //    {
-        //        BackColor = Color.Transparent,
-        //        Image = spriteImage,
-        //        Location = new Point(backgr.X, backgr.Y),
-        //        Size = new Size(backgr.SizeX, backgr.SizeY),
-        //        Tag = backgr,
-        //        Parent = this.gameWindow
-        //    };
-        //    this.Background = picBox;
-        //    this.pictureBoxes.Add(picBox);
-        //    this.gameWindow.Controls.Add(picBox);
-        //}
 
         //------------
         public void LoadResources()
