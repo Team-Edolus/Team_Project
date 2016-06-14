@@ -17,6 +17,7 @@ namespace RPG_AdvancedCS_May.GameEngine
         private IUserInputInterface controller;
         private IPaintInterface Painter;
         private CharacterUnit Player;
+        private List<EnemyNPCUnit> enemies = new List<EnemyNPCUnit>();
 
         public Engine(IUserInputInterface givenController, IPaintInterface painter)
         {
@@ -24,14 +25,31 @@ namespace RPG_AdvancedCS_May.GameEngine
             this.Painter = painter;
             SubscribeToController(controller);
             IntialisePlayer();
+            this.enemies = InitialiseEnemies();
+
         }
 
         private void IntialisePlayer()
         {
             this.Player = new Warrior(16, 24, 200, 100, 250, 250, 10, 80, 4, SpriteType.Char1);
             Painter.AddObject(Player);
-            Painter.AddObject(new EnemyNPCUnit(39, 24, 200, 200, 50, 50, 10, 5, 3, SpriteType.Boar));
-            Painter.AddObject(new Background());
+        }
+
+        private List<EnemyNPCUnit> InitialiseEnemies()
+        {
+            List<EnemyNPCUnit> enemies = new List<EnemyNPCUnit>();
+
+            enemies.Add(new EnemyNPCUnit(39, 24, 200, 200, 50, 50, 10, 5, 3, SpriteType.Boar));
+            enemies.Add(new EnemyNPCUnit(39, 24, 300, 300, 50, 50, 10, 5, 3, SpriteType.Boar));
+            //TO DO: add more enemies
+
+
+            foreach (var enemy in enemies)
+            {
+                Painter.AddObject(enemy);
+            }
+
+            return enemies;
         }
 
         private void SubscribeToController(IUserInputInterface userInputInterface)
@@ -62,48 +80,46 @@ namespace RPG_AdvancedCS_May.GameEngine
             };
         }
 
-
-        //The if statements in the following four methods prevent the player from leaving the screen window
+        
         private void MovePlayerUp()
         {
-            this.Player.Direction = new Direction(0, -1);
-            if (Player.Y > 0)
-            {
-                this.ProcessPlayerMovement();
-            }
+            this.ProcessPlayerMovement(new Direction(0, -1));
         }
         private void MovePlayerDown()
         {
-            this.Player.Direction = new Direction(0, 1);
-            if (Player.Y + Player.SizeY < 680)
-            {
-                this.ProcessPlayerMovement();
-            }
+            this.ProcessPlayerMovement(new Direction(0, 1));
         }
         private void MovePlayerRight()
         {
-            this.Player.Direction = new Direction(1, 0);
-            if (Player.X + Player.Y < 1350)
-            //if (Player.X < 1280 - Player.SizeX)
-            //if (Player.X < 1266)
-            //if(Player.X + Player.SizeX < 1280)
-            {
-                this.ProcessPlayerMovement();
-            }
+            this.ProcessPlayerMovement(new Direction(1, 0));
         }
         private void MovePlayerLeft()
         {
-            this.Player.Direction = new Direction(-1, 0);
-            if (Player.X > 0)
-            {
-                this.ProcessPlayerMovement();
-            }
+            this.ProcessPlayerMovement(new Direction(-1, 0));
         }
 
-        public void ProcessPlayerMovement()
+        public void ProcessPlayerMovement(Direction direction)
         {
-            //TO DO: Implement checks and collision detection
-            this.Player.Move();
+            bool shouldMove = true;
+            foreach (var enemy in enemies)
+            {
+                if ((this.Player.X - this.Player.SizeX + direction.DirX) >= (enemy.X - enemy.SizeX) &&
+                    (this.Player.Y + this.Player.SizeY + direction.DirY) >= (enemy.Y - enemy.SizeY) &&
+                    (this.Player.X - this.Player.SizeX + direction.DirX) <= (enemy.X + enemy.SizeX) &&
+                    (this.Player.Y - this.Player.SizeY + direction.DirY) <= (enemy.Y + enemy.SizeY))
+                {
+                    if (true) // TO DO : check for going outside of the map
+                    {
+                        shouldMove = false;
+                    }
+                }
+            }
+
+            if (shouldMove)
+            {
+                this.Player.Direction = direction;
+                this.Player.Move();
+            }
         }
 
         private void UsePlayerAbility(int x, int y)
