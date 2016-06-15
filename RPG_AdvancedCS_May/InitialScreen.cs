@@ -34,5 +34,17 @@ namespace RPG_AdvancedCS_May
         {
             this.Show();
         }
+
+        private void BTN_Options_Click(object sender, EventArgs e)
+        {
+            FormOptions formOptions = new FormOptions();
+            formOptions.Show();
+        }
+
+        private void BTN_Credits_Click(object sender, EventArgs e)
+        {
+            FormCredits formCredits = new FormCredits();
+            formCredits.Show();
+        }
     }
 }

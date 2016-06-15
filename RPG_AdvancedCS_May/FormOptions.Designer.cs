@@ -39,11 +39,10 @@
             "Sound Effects",
             "Others",
             "Not set yet"});
-            this.CLBOX_Options.Location = new System.Drawing.Point(12, 12);
+            this.CLBOX_Options.Location = new System.Drawing.Point(12, 15);
             this.CLBOX_Options.Name = "CLBOX_Options";
             this.CLBOX_Options.Size = new System.Drawing.Size(258, 225);
-            this.CLBOX_Options.TabIndex = 0;
-            this.CLBOX_Options.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            this.CLBOX_Options.TabIndex = 1;
             // 
             // FormOptions
             // 
