@@ -37,9 +37,10 @@
             // 
             this.BTN_Play.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.BTN_Play.Font = new System.Drawing.Font("Old English Text MT", 16F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_Play.Location = new System.Drawing.Point(88, 160);
+            this.BTN_Play.Location = new System.Drawing.Point(59, 104);
+            this.BTN_Play.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.BTN_Play.Name = "BTN_Play";
-            this.BTN_Play.Size = new System.Drawing.Size(134, 61);
+            this.BTN_Play.Size = new System.Drawing.Size(89, 40);
             this.BTN_Play.TabIndex = 0;
             this.BTN_Play.Text = "Play";
             this.BTN_Play.UseVisualStyleBackColor = false;
@@ -51,23 +52,25 @@
             this.LBL_GameTitle.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.LBL_GameTitle.Font = new System.Drawing.Font("Old English Text MT", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBL_GameTitle.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LBL_GameTitle.Location = new System.Drawing.Point(40, 25);
+            this.LBL_GameTitle.Location = new System.Drawing.Point(27, 16);
+            this.LBL_GameTitle.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.LBL_GameTitle.Name = "LBL_GameTitle";
-            this.LBL_GameTitle.Size = new System.Drawing.Size(260, 44);
+            this.LBL_GameTitle.Size = new System.Drawing.Size(169, 28);
             this.LBL_GameTitle.TabIndex = 1;
             this.LBL_GameTitle.Text = "Monster World";
             // 
             // InitialScreen
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.BackgroundImage = global::RPG_AdvancedCS_May.Properties.Resources.bg;
-            this.ClientSize = new System.Drawing.Size(328, 294);
+            this.ClientSize = new System.Drawing.Size(349, 349);
             this.Controls.Add(this.LBL_GameTitle);
             this.Controls.Add(this.BTN_Play);
             this.Cursor = System.Windows.Forms.Cursors.Default;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.Name = "InitialScreen";
             this.Text = "InitialScreen";
             this.Load += new System.EventHandler(this.InitialScreen_Load);
