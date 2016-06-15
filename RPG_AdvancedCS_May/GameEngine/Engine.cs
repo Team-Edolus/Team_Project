@@ -7,7 +7,7 @@ using RPG_AdvancedCS_May.Interfaces;
 using RPG_AdvancedCS_May.Structure;
 
 namespace RPG_AdvancedCS_May.GameEngine
-{
+{ 
     public class Engine
     {
         private IUserInputInterface _controller;
@@ -26,9 +26,20 @@ namespace RPG_AdvancedCS_May.GameEngine
             SubscribeToController();
             this._enemies = new List<EnemyNPCUnit>();
             this._abilities = new List<Ability>();
+            SetBackground();
+            InitialiseItems();
             InitialiseEnemies();
             IntialisePlayer();
-            SetBackground();
+        }
+
+        private void InitialiseItems()
+        {
+            var item = new Axe();
+            var pineapple = new Pineapple();
+            var shield = new Shield();
+            Painter.AddObject(item);
+            Painter.AddObject(pineapple);
+            Painter.AddObject(shield);
         }
 
         private void IntialisePlayer()
