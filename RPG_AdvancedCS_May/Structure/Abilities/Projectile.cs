@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using RPG_AdvancedCS_May.GameEngine;
 using RPG_AdvancedCS_May.Interfaces;
 
 namespace RPG_AdvancedCS_May.Structure
 {
-    public abstract class Projectile : GameObject, IMoveable //TO DO
+    public abstract class Projectile : GameObject, IMoveable   //Make an interface?   //TO DO: 
     {
         //Description: Spells, Arrows, etc..
-        public Projectile(int sizeX, int sizeY, int x, int y) : base(sizeX, sizeY, x, y)
+        protected Projectile(int sizeX, int sizeY, int x, int y) : base(sizeX, sizeY, x, y)
         {
         }
 

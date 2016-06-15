@@ -9,9 +9,8 @@ namespace RPG_AdvancedCS_May.Structure
     public class Obstacle : Environment //TO DO
     {
         //Description: Trees, Rivers, etc.
-        public Obstacle(int sizeX, int sizeY, int x, int y) : base(sizeX, sizeY, x, y)
+        public Obstacle(int x, int y, int sizeX, int sizeY) : base(x, y, sizeX, sizeY)
         {
-
         }
     }
 }

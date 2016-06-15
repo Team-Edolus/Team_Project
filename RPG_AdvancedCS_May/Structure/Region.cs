@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace RPG_AdvancedCS_May.Structure
 {
-    class Region
+    public class Region
     {
         //TO DO
         //Part of the Map

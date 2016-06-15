@@ -6,11 +6,10 @@ using System.Threading.Tasks;
 
 namespace RPG_AdvancedCS_May.Structure
 {
-    class Structure : Environment
+    public class Structure : Environment
     {
         //TO DO
-        
-        public Structure(int sizeX, int sizeY, int x, int y) : base(sizeX, sizeY, x, y)
+        public Structure(int x, int y, int sizeX, int sizeY) : base(x, y, sizeX, sizeY)
         {
         }
     }

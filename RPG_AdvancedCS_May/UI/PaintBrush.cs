@@ -15,10 +15,10 @@ namespace RPG_AdvancedCS_May.UI
         private const int ProgrssBarSizeX = 30;
         private const int ProgressBarSizeY = 8;
         private const int ProgressbarOffsetX = -3;
-        private  const int ProgressbarOffsetY = -10;
+        private const int ProgressbarOffsetY = -10;
 
         //-------------------------------------
-        private Image CharacterImage, BoarImage, BackgroundImage;
+        private Image CharacterImage, BoarImage, BackgroundImage, SwordImage;
         //-------------------------------------
 
         //private PictureBox Background;
@@ -53,7 +53,8 @@ namespace RPG_AdvancedCS_May.UI
             this.pictureBoxes.Remove(picBox);
             if (renderableObject is IUnit)
             {
-                ProgressBar progressBar = GetProgressbarByObject(renderableObject as IUnit);
+                var progressBar = GetProgressbarByObject(renderableObject as IUnit);
+                this.gameWindow.Controls.Remove(progressBar);
                 this.progressBars.Remove(progressBar);
             }
         }
@@ -65,10 +66,18 @@ namespace RPG_AdvancedCS_May.UI
 
             if (renderableObject is IUnit)
             {
-                IUnit unit = renderableObject as IUnit;
-                ProgressBar progressBar = GetProgressbarByObject(unit);
+                var unit = (IUnit)renderableObject;
+                var progressBar = GetProgressbarByObject(unit);
+                if (progressBar.Value > unit.CurrentHP)
+                {
+                    progressBar.Value = unit.CurrentHP - 1;
+                    progressBar.Value += 1;
+                }
+                else
+                {
+                    progressBar.Value = unit.CurrentHP;
+                }
                 this.SetProgressBarLocation(unit, progressBar);
-                progressBar.Value = unit.CurrentHP;
             }
         }
 
@@ -104,7 +113,7 @@ namespace RPG_AdvancedCS_May.UI
             //test
             if (unit is EnemyNPCUnit)
             {
-            progressBar.SetState(2);
+                progressBar.SetState(2);
             }
             //
             //endTest
@@ -125,6 +134,12 @@ namespace RPG_AdvancedCS_May.UI
                 Parent = this.gameWindow,
                 Tag = new CustomPicBoxTag(renderableObject, this.Controller)
             };
+            if (renderableObject is BasicAttack)
+            {
+                var ability = (BasicAttack)renderableObject;
+                picBox.Location = new Point(ability.VisualX, ability.VisualY);
+                picBox.Size = new Size(ability.VisualSizeX, ability.VisualSizeY);
+            }
             this.pictureBoxes.Add(picBox);
             this.gameWindow.Controls.Add(picBox);
             //test
@@ -146,9 +161,14 @@ namespace RPG_AdvancedCS_May.UI
                 case SpriteType.Char1:
                     image = this.CharacterImage;
                     break;
-                case SpriteType.Boar: image = this.BoarImage;
+                case SpriteType.Boar:
+                    image = this.BoarImage;
                     break;
-                case SpriteType.Background: image = this.BackgroundImage;
+                case SpriteType.Background:
+                    image = this.BackgroundImage;
+                    break;
+                case SpriteType.Sword:
+                    image = this.SwordImage;
                     break;
                 default:
                     image = new PictureBox().Image;
@@ -156,14 +176,14 @@ namespace RPG_AdvancedCS_May.UI
             }
             return image;
         }
-        
+
         private ProgressBar GetProgressbarByObject(IUnit unit)
         {
             //return this.progressBars.First(prog => prog.Tag == unit);
             return this.progressBars.First(prog =>
             {
                 var customTag = (prog.Tag as CustomProgBarTag);
-                bool result = false;
+                var result = false;
                 if (customTag != null)
                 {
                     result = customTag.RendObject == unit;
@@ -178,7 +198,7 @@ namespace RPG_AdvancedCS_May.UI
             return this.pictureBoxes.First(pic =>
             {
                 var customTag = (pic.Tag as CustomPicBoxTag);
-                bool result = false;
+                var result = false;
                 if (customTag != null)
                 {
                     result = customTag.RendObject == renderableObject;
@@ -193,7 +213,8 @@ namespace RPG_AdvancedCS_May.UI
             this.CharacterImage = Image.FromFile(Images.Character1ImagePath);
             this.BoarImage = Image.FromFile(Images.BoarImagePath);
             this.BackgroundImage = Image.FromFile(Images.BackGroundImagePath);
+            this.SwordImage = Image.FromFile(Images.SwordImagePath);
         }
-        
+
     }
 }

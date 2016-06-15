@@ -61,6 +61,7 @@
     <Compile Include="Graphics\Background.cs" />
     <Compile Include="Graphics\Images.cs" />
     <Compile Include="Graphics\SpriteType.cs" />
+    <Compile Include="Interfaces\IAbility.cs" />
     <Compile Include="Interfaces\IAbilityUseable.cs" />
     <Compile Include="Interfaces\IGameObject.cs" />
     <Compile Include="Interfaces\IMeleeAttacking.cs" />
@@ -74,22 +75,24 @@
     <Compile Include="Startup.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Structure\Abilities\Ability.cs" />
+    <Compile Include="Structure\Abilities\AbilityEffectEnum.cs" />
     <Compile Include="Structure\Abilities\ActiveAbility.cs" />
     <Compile Include="Structure\Abilities\BasicAttack.cs" />
     <Compile Include="Structure\Abilities\MeleeAbility.cs" />
-    <Compile Include="Structure\CharacterUnit.cs" />
+    <Compile Include="Structure\Abilities\ReactionTypeEnum.cs" />
+    <Compile Include="Structure\Units\CharacterUnit.cs" />
     <Compile Include="Structure\Environment.cs" />
-    <Compile Include="Structure\FriendlyNPCUnit.cs" />
+    <Compile Include="Structure\Units\FriendlyNPCUnit.cs" />
     <Compile Include="Structure\GameObject.cs" />
-    <Compile Include="Structure\EnemyNPCUnit.cs" />
+    <Compile Include="Structure\Units\EnemyNPCUnit.cs" />
     <Compile Include="Structure\Gateway.cs" />
     <Compile Include="Structure\Obstacle.cs" />
     <Compile Include="Structure\Region.cs" />
-    <Compile Include="Structure\Projectile.cs" />
+    <Compile Include="Structure\Abilities\Projectile.cs" />
     <Compile Include="Structure\Abilities\Spell.cs" />
     <Compile Include="Structure\Structure.cs" />
-    <Compile Include="Structure\Unit.cs" />
-    <Compile Include="Structure\Warrior.cs" />
+    <Compile Include="Structure\Units\Unit.cs" />
+    <Compile Include="Structure\Units\Warrior.cs" />
     <Compile Include="UI\CustomControls\CustomPicBoxTag.cs" />
     <Compile Include="UI\CustomControls\CustomPictureBox.cs">
       <SubType>Component</SubType>
@@ -112,7 +115,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="ClassDiagram.cd" />
     <None Include="ClassDiagram1.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -133,6 +135,7 @@
     <Content Include="Resources\Boar_39x24.png" />
     <Content Include="Resources\Character_16x24.png" />
     <Content Include="Resources\guy.png" />
+    <Content Include="Resources\Sword_6x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

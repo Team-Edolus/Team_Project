@@ -17,6 +17,8 @@ namespace RPG_AdvancedCS_May
 {
     public partial class GameWindow : Form
     {
+        public const int TIME_INTERVAL = 30;
+
         public GameWindow()
         {
             InitializeComponent();
@@ -27,7 +29,7 @@ namespace RPG_AdvancedCS_May
             IUserInputInterface controller = new ControllerUserInput(this);
             //IPaintInterface painter = new PaintBrush(this);
             IPaintInterface painter = new PaintBrush(this, controller);
-            var engine = new Engine(controller, painter);
+            var engine = new Engine(controller, painter, TIME_INTERVAL);
             var timer = new Timer {Interval = 30};
             timer.Tick += (s, args) =>
             {

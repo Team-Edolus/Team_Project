@@ -10,6 +10,7 @@ namespace RPG_AdvancedCS_May.Interfaces
     {
         int MaxLifespanInMS { get; set; }
         int CurrentLifespanInMS { get; set; }
-        bool hasTimedOut { get; set; }
+
+        bool HasTimedOut { get; set; }
     }
 }

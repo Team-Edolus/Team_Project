@@ -1,21 +1,16 @@
-﻿using System;
-using System.CodeDom;
-using System.Collections.Generic;
-
+﻿
 using RPG_AdvancedCS_May.Interfaces;
 using RPG_AdvancedCS_May.GameEngine;
 using RPG_AdvancedCS_May.Graphics;
-using RPG_AdvancedCS_May.GameEngine;
 
 namespace RPG_AdvancedCS_May.Structure
 {
     public abstract class CharacterUnit : Unit, IAbilityUseable
     {
-        protected CharacterUnit(int sizeX, int sizeY, int x, int y, int currentHp, int maxHp, int attackPoints,
-            int defensePoints, int movementSpeed, SpriteType spriteType)
-            : base(sizeX, sizeY, x, y, currentHp, maxHp, attackPoints, defensePoints, movementSpeed, spriteType)
+        protected CharacterUnit(int x, int y, int sizeX, int sizeY, int currentHp, int maxHp, 
+            int attackPoints, int defensePoints, int movementSpeed, SpriteType spriteType) 
+            : base(x, y, sizeX, sizeY, currentHp, maxHp, attackPoints, defensePoints, movementSpeed, spriteType)
         {
-
         }
 
         public DirectionEnum DetermineAbilityDirection(int mouseX, int mouseY)
