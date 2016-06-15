@@ -10,6 +10,8 @@ using RPG_AdvancedCS_May.Structure;
 
 namespace RPG_AdvancedCS_May.GameEngine
 {
+    using Structure.BoostItems;
+
     public class Engine
     {
         private IUserInputInterface controller;
@@ -26,6 +28,13 @@ namespace RPG_AdvancedCS_May.GameEngine
             InitialiseEnemies();
             IntialisePlayer();
             SetBackground();
+            InitialiseItems();
+        }
+
+        private void InitialiseItems()
+        {
+            var item = new Axe();
+            Painter.AddObject(item);
         }
 
 

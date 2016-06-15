@@ -83,6 +83,8 @@
     <Compile Include="Structure\Abilities\ActiveAbility.cs" />
     <Compile Include="Structure\Abilities\BasicAttack.cs" />
     <Compile Include="Structure\Abilities\MeleeAbility.cs" />
+    <Compile Include="Structure\BoostItems\Axe.cs" />
+    <Compile Include="Structure\BoostItems\Item.cs" />
     <Compile Include="Structure\CharacterUnit.cs" />
     <Compile Include="Structure\Environment.cs" />
     <Compile Include="Structure\FriendlyNPCUnit.cs" />

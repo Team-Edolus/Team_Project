@@ -5,6 +5,7 @@
         Char1,
         Char2,
         Boar,
-        Background
+        Background,
+        Axe
     }
 }
