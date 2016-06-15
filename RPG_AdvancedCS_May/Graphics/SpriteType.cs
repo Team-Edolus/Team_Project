@@ -6,6 +6,8 @@
         Char2,
         Boar,
         Background,
-        Axe
+        Axe,
+        Pineapple,
+        Shield
     }
 }

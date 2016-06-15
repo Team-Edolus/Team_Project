@@ -34,7 +34,11 @@ namespace RPG_AdvancedCS_May.GameEngine
         private void InitialiseItems()
         {
             var item = new Axe();
+            var pineapple = new Pineapple();
+            var shield = new Shield();
             Painter.AddObject(item);
+            Painter.AddObject(pineapple);
+            Painter.AddObject(shield);
         }
 
 

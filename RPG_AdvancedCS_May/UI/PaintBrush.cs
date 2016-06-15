@@ -18,7 +18,7 @@ namespace RPG_AdvancedCS_May.UI
         private  const int ProgressbarOffsetY = -10;
 
         //-------------------------------------
-        private Image CharacterImage, BoarImage, BackgroundImage, AxeImage;
+        private Image CharacterImage, BoarImage, BackgroundImage, AxeImage, PineappleImage, ShieldImage;
         //-------------------------------------
 
         //private PictureBox Background;
@@ -150,7 +150,11 @@ namespace RPG_AdvancedCS_May.UI
                     break;
                 case SpriteType.Background: image = this.BackgroundImage;
                     break;
-                    case SpriteType.Axe: image = this.AxeImage;
+                case SpriteType.Axe: image = this.AxeImage;
+                    break;
+                case SpriteType.Pineapple: image = this.PineappleImage;
+                    break;
+                case SpriteType.Shield:image = this.ShieldImage;
                     break;
                 default:
                     image = new PictureBox().Image;
@@ -196,6 +200,8 @@ namespace RPG_AdvancedCS_May.UI
             this.BoarImage = Image.FromFile(Images.BoarImagePath);
             this.BackgroundImage = Image.FromFile(Images.BackGroundImagePath);
             this.AxeImage = Image.FromFile(Images.AxeDefaultImagePath);
+            this.PineappleImage = Image.FromFile(Images.PineappleImage);
+            this.ShieldImage = Image.FromFile(Images.ShieldImage);
         }
         
     }

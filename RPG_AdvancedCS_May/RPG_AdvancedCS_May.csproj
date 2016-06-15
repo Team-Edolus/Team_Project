@@ -85,6 +85,8 @@
     <Compile Include="Structure\Abilities\MeleeAbility.cs" />
     <Compile Include="Structure\BoostItems\Axe.cs" />
     <Compile Include="Structure\BoostItems\Item.cs" />
+    <Compile Include="Structure\BoostItems\Pineapple.cs" />
+    <Compile Include="Structure\BoostItems\Shield.cs" />
     <Compile Include="Structure\CharacterUnit.cs" />
     <Compile Include="Structure\Environment.cs" />
     <Compile Include="Structure\FriendlyNPCUnit.cs" />
