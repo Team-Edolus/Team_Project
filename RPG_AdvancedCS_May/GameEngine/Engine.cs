@@ -152,7 +152,6 @@ namespace RPG_AdvancedCS_May.GameEngine
                     (this._player.X - this._player.SizeX) <= (item.X + item.SizeX) &&
                     (this._player.Y - this._player.SizeY) <= (item.Y + item.SizeY))
                 {
-                    MessageBox.Show($"player x {this._player.X} player size x {this._player.SizeX} item x {item.X} item size x {item.SizeX}");
                     item.ApplyItemEffects(_player);
                     this._items.Remove(item);
                     this.Painter.RemoveObject(item);
