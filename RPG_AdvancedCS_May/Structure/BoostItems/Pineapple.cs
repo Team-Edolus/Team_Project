@@ -1,4 +1,4 @@
-﻿namespace RPG_AdvancedCS_May.Structure
+﻿namespace RPG_AdvancedCS_May.Structure.BoostItems
 {
     using Graphics;
 
@@ -9,13 +9,13 @@
         private const int Pineapple_DEFAULT_DEFENCE_BOOST = 0;
         private const int PineappleDefaultSizeX = 35;
         private const int PineappleDefaultSizeY = 32;
-        private const int PineappleX = 500;
-        private const int PineappleY = 300;
         private const SpriteType PineappleDefaultSprite = SpriteType.Pineapple;
 
 
-        public Pineapple() : base(PineappleDefaultSizeX, PineappleDefaultSizeY, PineappleX, PineappleY, PineappleDefaultSprite, Pineapple_DEFAULT_HEALTH_BOOST, Pineapple_DEFAULT_DAMAGE_BOOST, Pineapple_DEFAULT_DEFENCE_BOOST)
+        public Pineapple(int x, int y) : base(PineappleDefaultSizeX, PineappleDefaultSizeY, x, y, PineappleDefaultSprite, Pineapple_DEFAULT_HEALTH_BOOST, Pineapple_DEFAULT_DAMAGE_BOOST, Pineapple_DEFAULT_DEFENCE_BOOST)
         {
+            this.SizeX = PineappleDefaultSizeX;
+            this.SizeY = PineappleDefaultSizeY;
         }
     }
 }

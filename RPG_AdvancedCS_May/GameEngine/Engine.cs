@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using RPG_AdvancedCS_May.Graphics;
 using RPG_AdvancedCS_May.Interfaces;
 using RPG_AdvancedCS_May.Structure;
+using RPG_AdvancedCS_May.Structure.BoostItems;
 
 namespace RPG_AdvancedCS_May.GameEngine
 { 
@@ -17,6 +18,7 @@ namespace RPG_AdvancedCS_May.GameEngine
         private CharacterUnit _player;
         private List<EnemyNPCUnit> _enemies;
         private List<Ability> _abilities; //Timeoutable
+        private List<Item> _items;
 
         public Engine(IUserInputInterface givenController, IPaintInterface painter, int timeInterval)
         {
@@ -26,6 +28,7 @@ namespace RPG_AdvancedCS_May.GameEngine
             SubscribeToController();
             this._enemies = new List<EnemyNPCUnit>();
             this._abilities = new List<Ability>();
+            this._items = new List<Item>();
             SetBackground();
             InitialiseItems();
             InitialiseEnemies();
@@ -34,17 +37,20 @@ namespace RPG_AdvancedCS_May.GameEngine
 
         private void InitialiseItems()
         {
-            var item = new Axe();
-            var pineapple = new Pineapple();
-            var shield = new Shield();
-            Painter.AddObject(item);
-            Painter.AddObject(pineapple);
-            Painter.AddObject(shield);
+            _items.Add(new Pineapple(20, 20));
+            _items.Add(new Pineapple( 80, 80));
+            _items.Add(new Axe( 120, 120));
+            _items.Add(new Shield( 320, 320));
+
+            foreach (var item in _items)
+            {
+                Painter.AddObject(item);
+            }
         }
 
         private void IntialisePlayer()
         {
-            this._player = new Warrior(200, 100, 16, 24, 250, 250, 10, 80, 4, SpriteType.Char1);
+            this._player = new Warrior(500, 500, 16, 24, 250, 250, 10, 80, 4, SpriteType.Char1);
             Painter.AddObject(_player);
         }
         private void InitialiseEnemies()
@@ -53,7 +59,7 @@ namespace RPG_AdvancedCS_May.GameEngine
             _enemies.Add(new EnemyNPCUnit(300, 300, 39, 24, 450, 450, 10, 5, 3, SpriteType.Boar));
             _enemies.Add(new EnemyNPCUnit(400, 400, 39, 24, 250, 300, 10, 5, 3, SpriteType.Boar));
             _enemies.Add(new EnemyNPCUnit(500, 500, 39, 24, 200, 250, 10, 5, 3, SpriteType.Boar));
-            //TO DO: add more enemies
+            _enemies.Add(new EnemyNPCUnit(600, 600, 39, 24, 200, 250, 10, 5, 3, SpriteType.Boar));
 
             foreach (var enemy in _enemies)
             {
@@ -133,31 +139,27 @@ namespace RPG_AdvancedCS_May.GameEngine
 
         public void ProcessPlayerMovement()
         {
-            #region CodeForRefactoring
-            //bool shouldMove = true;
-            //foreach (var enemy in _enemies)
-            //{
-            //    if ((this._player.X - this._player.SizeX + direction.DirX) >= (enemy.X - enemy.SizeX) &&
-            //        (this._player.Y + this._player.SizeY + direction.DirY) >= (enemy.Y - enemy.SizeY) &&
-            //        (this._player.X - this._player.SizeX + direction.DirX) <= (enemy.X + enemy.SizeX) &&
-            //        (this._player.Y - this._player.SizeY + direction.DirY) <= (enemy.Y + enemy.SizeY))
-            //    {
-            //        if (true) // TO DO : check for going outside of the map
-            //        {
-            //            shouldMove = false;
-            //        }
-            //    }
-            //}
-
-            //if (shouldMove)
-            //{
-            //    this._player.Direction = direction;
-            //    this._player.Move();
-            //}
-            #endregion
-            //TO DO : Process collision in seperate class CollisionHandler
+            this.CollectItems();
             this._player.Move();
         }
+
+        private void CollectItems()
+        {
+            foreach (var item in _items)
+            {
+                if ((this._player.X - this._player.SizeX) >= (item.X - item.SizeX) &&
+                    (this._player.Y + this._player.SizeY) >= (item.Y - item.SizeY) &&
+                    (this._player.X - this._player.SizeX) <= (item.X + item.SizeX) &&
+                    (this._player.Y - this._player.SizeY) <= (item.Y + item.SizeY))
+                {
+                    item.ApplyItemEffects(_player);
+                    this._items.Remove(item);
+                    this.Painter.RemoveObject(item);
+                    break;
+                }
+            }
+        }
+
         private void UsePlayerAbility(int x, int y)
         {
             if (_player is Warrior)
@@ -215,14 +217,11 @@ namespace RPG_AdvancedCS_May.GameEngine
             int RectBX2 = objB.X + objB.SizeX;
             int RectBY1 = objB.Y;
             int RectBY2 = objB.Y + objB.SizeY;
-            if (RectAX1 < RectBX2 &&
-                RectAX2 > RectBX1 && 
-                RectAY1 < RectBY2 && 
-                RectAY2 > RectBY1)
-            {
-                return true;
-            }
-            return false;
+
+            return RectAX1 < RectBX2 &&
+                   RectAX2 > RectBX1 && 
+                   RectAY1 < RectBY2 && 
+                   RectAY2 > RectBY1;
         }
 
         public void ProcessProjectileMovement(IMoveable movableObject)
