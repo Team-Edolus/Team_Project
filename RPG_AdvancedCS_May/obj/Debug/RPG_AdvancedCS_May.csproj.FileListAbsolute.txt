@@ -44,3 +44,5 @@ C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_Advanced
 D:\Dropbox\SoftUni\AdvancedC#\TeamProject\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.exe.config
 D:\Dropbox\SoftUni\AdvancedC#\TeamProject\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.exe
 D:\Dropbox\SoftUni\AdvancedC#\TeamProject\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.pdb
+C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.FormCredits.resources
+C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.FormOptions.resources
