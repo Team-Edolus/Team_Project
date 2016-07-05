@@ -5,7 +5,9 @@
 
     public abstract class Item : GameObject, IRenderable
     {
-        protected Item(int sizeX, int sizeY, int x, int y, SpriteType sprite, int healthPointsBoost, int damagePointBoost, int defensePointsBoost) : base(sizeX, sizeY, x, y)
+        protected Item(int sizeX, int sizeY, int x, int y, SpriteType sprite, 
+            int healthPointsBoost, int damagePointBoost, int defensePointsBoost) 
+            : base(sizeX, sizeY, x, y)
         {
             this.HealthPointsBoost = healthPointsBoost;
             this.DamagePointsBoost = damagePointBoost;

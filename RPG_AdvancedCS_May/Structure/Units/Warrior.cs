@@ -1,23 +1,24 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using RPG_AdvancedCS_May.Graphics;
-using RPG_AdvancedCS_May.Interfaces;
-
-using System.Windows.Forms;
-using RPG_AdvancedCS_May.GameEngine;
-
-namespace RPG_AdvancedCS_May.Structure
+﻿namespace RPG_AdvancedCS_May.Structure
 {
+    using System;
+    using Graphics;
+    using Interfaces;
+    using GameEngine;
+
     public class Warrior : CharacterUnit, IMeleeAttacking
     {
-        //TO DO: Make constant fields for Warrior and reduce constructor arguments;
-        public Warrior(int x, int y, int sizeX, int sizeY, int currentHp, int maxHp, 
-            int attackPoints, int defensePoints, int movementSpeed, SpriteType spriteType) 
-            : base(x, y, sizeX, sizeY, currentHp, maxHp, attackPoints, defensePoints, movementSpeed, spriteType)
+        private const int WarriorSizeX = 16;
+        private const int WarriorSizeY = 24;
+        private const int WarriorCurrHP= 250;
+        private const int WarriorMaxHP = 300;
+        private const int WarriorAttPoints = 25;
+        private const int WarriorDefPoints = 25;
+        private const int WarriorSpeed = 4;
+        private const SpriteType WarriorSprite = SpriteType.Char1;
+
+        public Warrior(int x, int y) 
+            : base(x, y, WarriorSizeX, WarriorSizeY, WarriorCurrHP, WarriorMaxHP,
+                  WarriorAttPoints, WarriorDefPoints, WarriorSpeed, WarriorSprite)
         {
         }
 
@@ -72,7 +73,7 @@ namespace RPG_AdvancedCS_May.Structure
                     abilityVisualY = this.Y + this.SizeY;
                     break;
                 default:
-                    throw  new ArgumentException("Unexisting direction");
+                    throw new ArgumentException("Unexisting direction");
             }
             return new BasicAttack(abilityX, abilityY, abilitySizeX, abilitySizeY, abilityVisualX, abilityVisualY, this);
         }

@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using RPG_AdvancedCS_May.GameEngine;
-using RPG_AdvancedCS_May.Graphics;
-
-namespace RPG_AdvancedCS_May.Structure
+﻿namespace RPG_AdvancedCS_May.Structure
 {
+    using Graphics;
+
     public class FriendlyNPCUnit : Unit
     {
         //TO DO

@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using RPG_AdvancedCS_May.GameEngine;
-using RPG_AdvancedCS_May.Graphics;
-using RPG_AdvancedCS_May.Interfaces;
-
-namespace RPG_AdvancedCS_May.Structure
+﻿namespace RPG_AdvancedCS_May.Structure
 {
+    using System;
+    using GameEngine;
+    using Graphics;
+    using Interfaces;
     public abstract class Unit : GameObject, IUnit, IMoveable, IRenderable
     {
         private int _currentHP;

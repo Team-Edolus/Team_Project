@@ -1,8 +1,6 @@
-﻿
-using RPG_AdvancedCS_May.Interfaces;
-
-namespace RPG_AdvancedCS_May.Graphics
+﻿namespace RPG_AdvancedCS_May.Graphics
 {
+    using Interfaces;
     public class Background : IRenderable //test class
     {
         public int SizeX { get; set; }
@@ -17,7 +15,7 @@ namespace RPG_AdvancedCS_May.Graphics
             SizeY = 720;
             X = 0;
             Y = 0;
-            SpriteType = SpriteType.Background;
+            SpriteType = SpriteType.StartRegionBG;
         }
     }
 }

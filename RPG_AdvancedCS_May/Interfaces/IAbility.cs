@@ -1,7 +1,7 @@
-﻿using RPG_AdvancedCS_May.Structure;
-
-namespace RPG_AdvancedCS_May.Interfaces
+﻿namespace RPG_AdvancedCS_May.Interfaces
 {
+    using Structure;
+
     public interface IAbility
     {
         int VisualX { get; set; }

@@ -2,6 +2,7 @@
 {
     public enum SpriteType
     {
+        StartRegionBG,
         Char1,
         Char2,
         Boar,

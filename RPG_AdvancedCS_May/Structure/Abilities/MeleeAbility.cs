@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using RPG_AdvancedCS_May.Interfaces;
-
-namespace RPG_AdvancedCS_May.Structure
+﻿namespace RPG_AdvancedCS_May.Structure
 {
+    using Interfaces;
+
     public abstract class MeleeAbility : Ability
     {
         protected MeleeAbility(int x, int y, int sizeX, int sizeY, int visualX, int visualY, 

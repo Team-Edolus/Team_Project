@@ -104,6 +104,7 @@
     <Compile Include="Structure\BoostItems\Shield.cs" />
     <Compile Include="Structure\Units\CharacterUnit.cs" />
     <Compile Include="Structure\Environment.cs" />
+    <Compile Include="Structure\Units\EnemyUnits\Boar1.cs" />
     <Compile Include="Structure\Units\FriendlyNPCUnit.cs" />
     <Compile Include="Structure\GameObject.cs" />
     <Compile Include="Structure\Units\EnemyNPCUnit.cs" />
@@ -123,6 +124,7 @@
     <Compile Include="UI\CustomControls\CustomProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="UI\ImageHandler.cs" />
     <Compile Include="UI\ModifyProgressBarColor.cs" />
     <Compile Include="UI\PaintBrush.cs" />
     <EmbeddedResource Include="FormCredits.resx">
@@ -147,6 +149,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -172,6 +175,7 @@
     <Content Include="Resources\guy.png" />
     <Content Include="Resources\pineapple35x32.png" />
     <Content Include="Resources\shield32x32.png" />
+    <Content Include="Resources\startRegion_v1_720p.png" />
     <Content Include="Resources\Sword_6x16.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

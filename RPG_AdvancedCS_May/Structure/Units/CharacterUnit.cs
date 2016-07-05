@@ -1,10 +1,9 @@
-﻿
-using RPG_AdvancedCS_May.Interfaces;
-using RPG_AdvancedCS_May.GameEngine;
-using RPG_AdvancedCS_May.Graphics;
-
-namespace RPG_AdvancedCS_May.Structure
+﻿namespace RPG_AdvancedCS_May.Structure
 {
+    using Interfaces;
+    using GameEngine;
+    using Graphics;
+
     public abstract class CharacterUnit : Unit, IAbilityUseable
     {
         protected CharacterUnit(int x, int y, int sizeX, int sizeY, int currentHp, int maxHp, 

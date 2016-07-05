@@ -1,17 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Windows.Forms;
-using RPG_AdvancedCS_May.Graphics;
-using RPG_AdvancedCS_May.Interfaces;
-using RPG_AdvancedCS_May.Structure;
-
-namespace RPG_AdvancedCS_May.GameEngine
+﻿namespace RPG_AdvancedCS_May.GameEngine
 { 
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    
+    using Graphics;
+    using Interfaces;
+    using Structure;
+
     public class Engine
     {
         private IUserInputInterface _controller;
-        private IPaintInterface Painter;
+        private IPaintInterface _painter;
         private int _timeInterval;
 
         private CharacterUnit _player;
@@ -21,48 +21,43 @@ namespace RPG_AdvancedCS_May.GameEngine
         public Engine(IUserInputInterface givenController, IPaintInterface painter, int timeInterval)
         {
             this._controller = givenController;
-            this.Painter = painter;
+            this._painter = painter;
             this._timeInterval = timeInterval;
             SubscribeToController();
             this._enemies = new List<EnemyNPCUnit>();
             this._abilities = new List<Ability>();
             SetBackground();
-            InitialiseItems();
+            //InitialiseItems(); //Bug: Items interfere with background.
             InitialiseEnemies();
             IntialisePlayer();
         }
 
         private void InitialiseItems()
         {
-            var item = new Axe();
-            var pineapple = new Pineapple();
             var shield = new Shield();
-            Painter.AddObject(item);
-            Painter.AddObject(pineapple);
-            Painter.AddObject(shield);
+            _painter.AddObject(shield);
         }
 
         private void IntialisePlayer()
         {
-            this._player = new Warrior(200, 100, 16, 24, 250, 250, 10, 80, 4, SpriteType.Char1);
-            Painter.AddObject(_player);
+            this._player = new Warrior(200, 100);
+            _painter.AddObject(_player);
         }
         private void InitialiseEnemies()
         {
-            _enemies.Add(new EnemyNPCUnit(200, 200, 39, 24, 1000, 1100, 10, 5, 3, SpriteType.Boar));
-            _enemies.Add(new EnemyNPCUnit(300, 300, 39, 24, 450, 450, 10, 5, 3, SpriteType.Boar));
-            _enemies.Add(new EnemyNPCUnit(400, 400, 39, 24, 250, 300, 10, 5, 3, SpriteType.Boar));
-            _enemies.Add(new EnemyNPCUnit(500, 500, 39, 24, 200, 250, 10, 5, 3, SpriteType.Boar));
-            //TO DO: add more enemies
+            _enemies.Add(new Boar1(200, 200));
+            _enemies.Add(new Boar1(300, 300));
+            _enemies.Add(new Boar1(400, 400));
+            _enemies.Add(new Boar1(500, 400));
 
             foreach (var enemy in _enemies)
             {
-                Painter.AddObject(enemy);
+                _painter.AddObject(enemy);
             }
         }
         private void SetBackground()
         {
-            Painter.SetBackground(new Background());
+            _painter.SetBackground(new Background());
         }
 
         //================================================
@@ -108,7 +103,8 @@ namespace RPG_AdvancedCS_May.GameEngine
         private void MovePlayerDown()
         {
             this._player.Direction = new Direction(0, 1);
-            if (_player.Y < 460)
+            //if (_player.Y + _player.SizeY < 720)
+            if (_player.Y + _player.SizeY < 680)
             {
                 this.ProcessPlayerMovement();
             }
@@ -116,8 +112,8 @@ namespace RPG_AdvancedCS_May.GameEngine
         private void MovePlayerRight()
         {
             this._player.Direction = new Direction(1, 0);
-            if (_player.X < 885)
             //if(_player.X + _player.SizeX < 1280)
+            if(_player.X + _player.SizeX < 1263)
             {
                 this.ProcessPlayerMovement();
             }
@@ -168,7 +164,7 @@ namespace RPG_AdvancedCS_May.GameEngine
                 if (meleeAbility is BasicAttack)
                 {
                     this._abilities.Add(meleeAbility);
-                    this.Painter.AddObject(meleeAbility as IRenderable);
+                    this._painter.AddObject(meleeAbility as IRenderable);
                     this.ProcessAreaAbilityEffect(meleeAbility);
                 }
                 //else if..  - other melee abilities
@@ -236,7 +232,7 @@ namespace RPG_AdvancedCS_May.GameEngine
             foreach (var deadUnit in deadUnits)
             {
                 this._enemies.Remove(deadUnit);
-                this.Painter.RemoveObject(deadUnit);
+                this._painter.RemoveObject(deadUnit);
             }
         }
         
@@ -245,14 +241,14 @@ namespace RPG_AdvancedCS_May.GameEngine
         public void Update()
         {
             this.RemoveDeadUnits();
-            this.Painter.RedrawObject(_player);
-            this._enemies.ForEach(this.Painter.RedrawObject);
+            this._painter.RedrawObject(_player);
+            this._enemies.ForEach(this._painter.RedrawObject);
             this._abilities.ForEach(a => a.CurrentLifespanInMS += this._timeInterval);
             var timedOutList = this._abilities.Where(a => a.HasTimedOut).ToList();
             foreach (var timedOutObj in timedOutList)
             {
                 this._abilities.Remove(timedOutObj);
-                this.Painter.RemoveObject(timedOutObj as IRenderable);
+                this._painter.RemoveObject(timedOutObj as IRenderable);
             }
         }
     }

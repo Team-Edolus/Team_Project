@@ -1,15 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Drawing;
-using System.Windows.Forms;
-
-using RPG_AdvancedCS_May.Interfaces;
-using RPG_AdvancedCS_May.Graphics;
-using RPG_AdvancedCS_May.Structure;
-
-namespace RPG_AdvancedCS_May.UI
+﻿namespace RPG_AdvancedCS_May.UI
 {
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Drawing;
+    using System.Windows.Forms;
+
+    using Interfaces;
+    using Graphics;
+    using Structure;
+
     public class PaintBrush : IPaintInterface
     {
         private const int ProgrssBarSizeX = 30;
@@ -17,9 +16,7 @@ namespace RPG_AdvancedCS_May.UI
         private const int ProgressbarOffsetX = -3;
         private const int ProgressbarOffsetY = -10;
 
-        //-------------------------------------
-        private Image CharacterImage, BoarImage, BackgroundImage, SwordImage, AxeImage, PineappleImage, ShieldImage;
-        //-------------------------------------
+        private ImageHandler imageHandler;
 
         //private PictureBox Background;
         private Form gameWindow;
@@ -29,12 +26,23 @@ namespace RPG_AdvancedCS_May.UI
 
         public PaintBrush(Form form, IUserInputInterface controller)
         {
-            LoadResources();
+            this.imageHandler = new ImageHandler();
             this.gameWindow = form;
-            this.gameWindow.BackgroundImage = Image.FromFile(Images.BackGroundImagePath);
             this.pictureBoxes = new List<PictureBox>();
             this.progressBars = new List<ProgressBar>();
             this.Controller = controller;
+        }
+
+        private void Wtf()
+        {
+            var picbox = new PictureBox
+            {
+                BackColor = Color.Red,
+                Location = new Point(100, 100),
+                Size = new Size(32, 32),
+            };
+            picbox.BringToFront();
+            this.gameWindow.Controls.Add(picbox);
         }
 
         //---------
@@ -83,7 +91,8 @@ namespace RPG_AdvancedCS_May.UI
 
         public void SetBackground(IRenderable renderableObject)
         {
-            var spriteImage = GetSpriteImage(renderableObject);
+            var spriteImage = this.imageHandler.GetSpriteImage(renderableObject);
+            this.gameWindow.BackgroundImage = spriteImage;
             var picBox = new CustomPictureBox
             {
                 BackColor = Color.Transparent,
@@ -124,7 +133,7 @@ namespace RPG_AdvancedCS_May.UI
 
         private void CreatepictureBox(IRenderable renderableObject)
         {
-            var spriteImage = GetSpriteImage(renderableObject);
+            var spriteImage = this.imageHandler.GetSpriteImage(renderableObject);
             var picBox = new CustomPictureBox
             {
                 BackColor = Color.Transparent,
@@ -151,36 +160,6 @@ namespace RPG_AdvancedCS_May.UI
         private void SetProgressBarLocation(IUnit unit, ProgressBar progressBar)
         {
             progressBar.Location = new Point(unit.X + ProgressbarOffsetX, unit.Y + ProgressbarOffsetY);
-        }
-
-        private Image GetSpriteImage(IRenderable renderableObject)
-        {
-            Image image;
-            switch (renderableObject.SpriteType)
-            {
-                case SpriteType.Char1:
-                    image = this.CharacterImage;
-                    break;
-                case SpriteType.Boar:
-                    image = this.BoarImage;
-                    break;
-                case SpriteType.Background:
-                    image = this.BackgroundImage;
-                    break;
-                case SpriteType.Sword:
-                    image = this.SwordImage;
-                    break;
-                case SpriteType.Axe: image = this.AxeImage;
-                    break;
-                case SpriteType.Pineapple: image = this.PineappleImage;
-                    break;
-                case SpriteType.Shield:image = this.ShieldImage;
-                    break;
-                default:
-                    image = new PictureBox().Image;
-                    break;
-            }
-            return image;
         }
 
         private ProgressBar GetProgressbarByObject(IUnit unit)
@@ -212,18 +191,5 @@ namespace RPG_AdvancedCS_May.UI
                 return result;
             });
         }
-
-        //------------
-        public void LoadResources()
-        {
-            this.CharacterImage = Image.FromFile(Images.Character1ImagePath);
-            this.BoarImage = Image.FromFile(Images.BoarImagePath);
-            this.BackgroundImage = Image.FromFile(Images.BackGroundImagePath);
-            this.SwordImage = Image.FromFile(Images.SwordImagePath);
-            this.AxeImage = Image.FromFile(Images.AxeDefaultImagePath);
-            this.PineappleImage = Image.FromFile(Images.PineappleImage);
-            this.ShieldImage = Image.FromFile(Images.ShieldImage);
-        }
-
     }
 }

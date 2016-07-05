@@ -1,11 +1,10 @@
-﻿using System;
-using System.Windows.Forms;
-
-using RPG_AdvancedCS_May.Interfaces;
-using RPG_AdvancedCS_May.GameEngine;
-
-namespace RPG_AdvancedCS_May.Controllers
+﻿namespace RPG_AdvancedCS_May.Controllers
 {
+    using System;
+    using System.Windows.Forms;
+    using Interfaces;
+    using GameEngine;
+
     public class ControllerUserInput : IUserInputInterface
     {
         public event EventHandler OnRightPressed;

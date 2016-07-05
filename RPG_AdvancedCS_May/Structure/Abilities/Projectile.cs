@@ -1,9 +1,9 @@
-﻿using System;
-using RPG_AdvancedCS_May.GameEngine;
-using RPG_AdvancedCS_May.Interfaces;
-
-namespace RPG_AdvancedCS_May.Structure
+﻿namespace RPG_AdvancedCS_May.Structure
 {
+    using System;
+    using GameEngine;
+    using Interfaces;
+
     public abstract class Projectile : GameObject, IMoveable   //Make an interface?   //TO DO: 
     {
         //Description: Spells, Arrows, etc..

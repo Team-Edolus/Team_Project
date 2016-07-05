@@ -1,9 +1,7 @@
-﻿using System.Windows.Forms;
-using RPG_AdvancedCS_May.Graphics;
-using RPG_AdvancedCS_May.Interfaces;
-
-namespace RPG_AdvancedCS_May.Structure
+﻿namespace RPG_AdvancedCS_May.Structure
 {
+    using Interfaces;
+
     public abstract class Ability : GameObject, IAbility, ITimeoutable
     {
         public int VisualX { get; set; }

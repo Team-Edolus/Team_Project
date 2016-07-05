@@ -1,18 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using RPG_AdvancedCS_May.Graphics;
-using RPG_AdvancedCS_May.Interfaces;
-using RPG_AdvancedCS_May.Structure;
-
-namespace RPG_AdvancedCS_May.Structure
+﻿namespace RPG_AdvancedCS_May.Structure
 {
+    using Graphics;
+    using Interfaces;
+
     public class BasicAttack : MeleeAbility, IRenderable
     {
-        //int x, int y, int sizeX, int sizeY, int visualX, int visualY, SpriteType spriteType
         public const int BasicAttackMaxLifespanInMS = 500;
         
-        protected const int BasicAttackVisualSizeX = 6; //test
+        protected const int BasicAttackVisualSizeX = 6; 
         protected const int BasicAttackVisualSizeY = 16;
         protected const int BasicAttackPower = 60;
         protected const AbilityEffectEnum BasicAttackAbilityEffect = AbilityEffectEnum.DamagingAbility;

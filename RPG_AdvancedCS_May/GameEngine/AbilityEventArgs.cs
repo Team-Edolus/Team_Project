@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace RPG_AdvancedCS_May.GameEngine
+﻿namespace RPG_AdvancedCS_May.GameEngine
 {
+    using System;
+
     public class AbilityEventArgs : EventArgs
     {
         public int MouseX { get; set; }

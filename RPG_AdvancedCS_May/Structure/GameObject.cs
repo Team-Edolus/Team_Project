@@ -1,7 +1,6 @@
-﻿using RPG_AdvancedCS_May.Interfaces;
-
-namespace RPG_AdvancedCS_May.Structure
+﻿namespace RPG_AdvancedCS_May.Structure
 {
+    using Interfaces;
     public abstract class GameObject : IGameObject
     {
         public int X { get; set; }
