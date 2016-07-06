@@ -64,13 +64,13 @@
     <Compile Include="GameEngine\Direction.cs" />
     <Compile Include="GameEngine\DirectionEnum.cs" />
     <Compile Include="GameEngine\Engine.cs" />
+    <Compile Include="GameEngine\RegionEntities.cs" />
     <Compile Include="GameWindow.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GameWindow.Designer.cs">
       <DependentUpon>GameWindow.cs</DependentUpon>
     </Compile>
-    <Compile Include="Graphics\Background.cs" />
     <Compile Include="Graphics\Images.cs" />
     <Compile Include="Graphics\SpriteType.cs" />
     <Compile Include="InitialScreen.cs">
@@ -85,6 +85,7 @@
     <Compile Include="Interfaces\IMeleeAttacking.cs" />
     <Compile Include="Interfaces\IMoveable.cs" />
     <Compile Include="Interfaces\IPaintInterface.cs" />
+    <Compile Include="Interfaces\IRegionInterface.cs" />
     <Compile Include="Interfaces\IRenderable.cs" />
     <Compile Include="Interfaces\ISpellCastable.cs" />
     <Compile Include="Interfaces\ITimeoutable.cs" />
@@ -102,15 +103,18 @@
     <Compile Include="Structure\BoostItems\Item.cs" />
     <Compile Include="Structure\BoostItems\Pineapple.cs" />
     <Compile Include="Structure\BoostItems\Shield.cs" />
+    <Compile Include="Structure\Regions\StartRegion.cs" />
+    <Compile Include="Structure\Regions\ValleyRegion.cs" />
     <Compile Include="Structure\Units\CharacterUnit.cs" />
     <Compile Include="Structure\Environment.cs" />
     <Compile Include="Structure\Units\EnemyUnits\Boar1.cs" />
+    <Compile Include="Structure\Units\EnemyUnits\GiantCrab1.cs" />
     <Compile Include="Structure\Units\FriendlyNPCUnit.cs" />
     <Compile Include="Structure\GameObject.cs" />
     <Compile Include="Structure\Units\EnemyNPCUnit.cs" />
     <Compile Include="Structure\Gateway.cs" />
     <Compile Include="Structure\Obstacle.cs" />
-    <Compile Include="Structure\Region.cs" />
+    <Compile Include="Structure\Regions\Region.cs" />
     <Compile Include="Structure\Abilities\Projectile.cs" />
     <Compile Include="Structure\Abilities\Spell.cs" />
     <Compile Include="Structure\Structure.cs" />
@@ -124,7 +128,7 @@
     <Compile Include="UI\CustomControls\CustomProgressBar.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="UI\ImageHandler.cs" />
+    <Compile Include="Graphics\ImageHandler.cs" />
     <Compile Include="UI\ModifyProgressBarColor.cs" />
     <Compile Include="UI\PaintBrush.cs" />
     <EmbeddedResource Include="FormCredits.resx">
@@ -150,6 +154,7 @@
     </Compile>
     <None Include="ClassDiagram1.cd" />
     <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -171,6 +176,7 @@
     <Content Include="Resources\Boar_39x24.png" />
     <Content Include="Resources\burger32x32.png" />
     <Content Include="Resources\Character_16x24.png" />
+    <Content Include="Resources\crab1_22x16.png" />
     <Content Include="Resources\edolus.ico" />
     <Content Include="Resources\guy.png" />
     <Content Include="Resources\pineapple35x32.png" />

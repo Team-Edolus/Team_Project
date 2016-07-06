@@ -27,8 +27,8 @@ namespace RPG_AdvancedCS_May
         private void Form1_Load(object sender, EventArgs e)
         {
             IUserInputInterface controller = new ControllerUserInput(this);
-            //IPaintInterface painter = new PaintBrush(this);
             IPaintInterface painter = new PaintBrush(this, controller);
+            //
             var engine = new Engine(controller, painter, TIME_INTERVAL);
             var timer = new Timer {Interval = 30};
             timer.Tick += (s, args) =>

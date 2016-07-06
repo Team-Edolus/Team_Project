@@ -8,6 +8,17 @@
     {
         private int _currentHP;
 
+        protected Unit(int x, int y, int sizeX, int sizeY, int currentHp, int maxHp, int attackPoints, int defensePoints, int movementSpeed, SpriteType spriteType) : base(x, y, sizeX, sizeY)
+        {
+            this._currentHP = currentHp;
+            this.MaxHP = maxHp;
+            this.AttackPoints = attackPoints;
+            this.DefensePoints = defensePoints;
+            this.MovementSpeed = movementSpeed;
+            this.SpriteType = spriteType;
+            this.IsAlive = true;
+        }
+
         public int MaxHP { get; set; }
         public int AttackPoints { get; set; }
         public int DefensePoints { get; set; }
@@ -21,10 +32,7 @@
 
         public int CurrentHP
         {
-            get
-            {
-                return _currentHP;
-            }
+            get { return _currentHP; }
             set
             {
                 if (value <= 0)
@@ -39,25 +47,20 @@
             }
         }
 
-
-        protected Unit(int x, int y, int sizeX, int sizeY, int currentHp, int maxHp, int attackPoints, int defensePoints, int movementSpeed, SpriteType spriteType) : base(x, y, sizeX, sizeY)
-        {
-            this._currentHP = currentHp;
-            this.MaxHP = maxHp;
-            this.AttackPoints = attackPoints;
-            this.DefensePoints = defensePoints;
-            this.MovementSpeed = movementSpeed;
-            this.SpriteType = spriteType;
-            this.IsAlive = true;
-        }
-
         public void Move()
         {
             this.X += this.MovementSpeed * this.Direction.DirX;
             this.Y += this.MovementSpeed * this.Direction.DirY;
         }
 
-        public virtual ReactionTypeEnum ReactToAbility(AbilityEffectEnum abilityEffect)
+
+        public void Relocate(int x, int y)
+        {
+            this.X = x;
+            this.Y = y;
+        }
+
+    public virtual ReactionTypeEnum ReactToAbility(AbilityEffectEnum abilityEffect)
         {
             switch (abilityEffect)
             {

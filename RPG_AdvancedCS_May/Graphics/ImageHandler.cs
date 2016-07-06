@@ -1,15 +1,16 @@
-﻿namespace RPG_AdvancedCS_May.UI
+﻿namespace RPG_AdvancedCS_May.Graphics
 {
     using System.Drawing;
     using System.Windows.Forms;
 
     using Interfaces;
-    using Graphics;
     public class ImageHandler
     {
         private Image startRegionBGImage;
+        private Image valleyRegionBGImage;
         private Image CharacterImage;
-        private Image BoarImage;
+        private Image Boar1Image;
+        private Image GiantCrab1Image;
         private Image BackgroundImage;
         private Image SwordImage;
         private Image AxeImage;
@@ -24,8 +25,10 @@
         private void LoadResources()
         {
             this.startRegionBGImage = Image.FromFile(Images.StartRegionBGImage);
+            this.valleyRegionBGImage = Image.FromFile(Images.ValleyRegionBGImage);
             this.CharacterImage = Image.FromFile(Images.Character1ImagePath);
-            this.BoarImage = Image.FromFile(Images.BoarImagePath);
+            this.Boar1Image = Image.FromFile(Images.BoarImagePath);
+            this.GiantCrab1Image = Image.FromFile(Images.GiantCrab1ImagePath);
             this.BackgroundImage = Image.FromFile(Images.BackGroundImagePath);
             this.SwordImage = Image.FromFile(Images.SwordImagePath);
             this.AxeImage = Image.FromFile(Images.AxeDefaultImagePath);
@@ -41,11 +44,17 @@
                 case SpriteType.StartRegionBG:
                     image = this.startRegionBGImage;
                     break;
+                case SpriteType.ValleyRegionBG:
+                    image = this.valleyRegionBGImage;
+                    break;
                 case SpriteType.Char1:
                     image = this.CharacterImage;
                     break;
-                case SpriteType.Boar:
-                    image = this.BoarImage;
+                case SpriteType.Boar1:
+                    image = this.Boar1Image;
+                    break;
+                case SpriteType.GiantCrab1:
+                    image = this.GiantCrab1Image;
                     break;
                 case SpriteType.Background:
                     image = this.BackgroundImage;

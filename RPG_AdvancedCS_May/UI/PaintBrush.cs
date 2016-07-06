@@ -6,10 +6,10 @@
     using System.Windows.Forms;
 
     using Interfaces;
-    using Graphics;
     using Structure;
+    using Graphics;
 
-    public class PaintBrush : IPaintInterface
+    public sealed class PaintBrush : IPaintInterface
     {
         private const int ProgrssBarSizeX = 30;
         private const int ProgressBarSizeY = 8;
@@ -37,7 +37,7 @@
         {
             var picbox = new PictureBox
             {
-                BackColor = Color.Red,
+                BackColor = Color.Orange,
                 Location = new Point(100, 100),
                 Size = new Size(32, 32),
             };

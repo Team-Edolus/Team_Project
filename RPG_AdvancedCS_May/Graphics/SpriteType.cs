@@ -3,9 +3,11 @@
     public enum SpriteType
     {
         StartRegionBG,
+        ValleyRegionBG,
         Char1,
         Char2,
-        Boar,
+        Boar1,
+        GiantCrab1,
         Sword,
         Background,
         Axe,

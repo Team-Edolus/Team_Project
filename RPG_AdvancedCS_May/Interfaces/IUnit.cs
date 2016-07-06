@@ -7,5 +7,7 @@
         int AttackPoints { get; set; }
         int DefensePoints { get; set; }
         bool IsAlive { get; set; }
+
+        void Relocate(int x, int y);
     }
 }

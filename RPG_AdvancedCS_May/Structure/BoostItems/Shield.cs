@@ -2,12 +2,12 @@
 {
     using Graphics;
 
-    public class Shield:Item
+    public class Shield : Item
     {
         private const int Shield_DEFAULT_DAMAGE_BOOST = 0;
         private const int Shield_DEFAULT_HEALTH_BOOST = 50;
         private const int Shield_DEFAULT_DEFENCE_BOOST = 0;
-        private const int ShieldDefaultSizeX = 321;
+        private const int ShieldDefaultSizeX = 32;
         private const int ShieldDefaultSizeY = 32;
         private const int ShieldX = 500;
         private const int ShieldY = 100;

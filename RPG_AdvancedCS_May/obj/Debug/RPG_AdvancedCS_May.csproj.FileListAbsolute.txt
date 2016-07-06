@@ -34,7 +34,6 @@ C:\Users\user17\Desktop\Tem\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_Advanc
 C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.exe.config
 C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.exe
 C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.pdb
-C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.csprojResolveAssemblyReference.cache
 C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.GameWindow.resources
 C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.Properties.Resources.resources
 C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.csproj.GenerateResource.Cache
@@ -48,3 +47,4 @@ C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_
 C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.FormOptions.resources
 C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.FormCredits.resources
 C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.FormOptions.resources
+C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.csprojResolveAssemblyReference.cache

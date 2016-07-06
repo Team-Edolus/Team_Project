@@ -1,8 +1,6 @@
-﻿
-using RPG_AdvancedCS_May.Graphics;
-
-namespace RPG_AdvancedCS_May.Structure
+﻿namespace RPG_AdvancedCS_May.Structure
 {
+    using Graphics;
     public class Boar1 : EnemyNPCUnit
     {
         private const int Boar1SizeX = 39;
@@ -12,7 +10,7 @@ namespace RPG_AdvancedCS_May.Structure
         private const int Boar1AttPoins = 20;
         private const int Boar1DefPoints = 10;
         private const int Boar1MovSpeed = 3;
-        private const SpriteType Boar1Sprite = SpriteType.Boar;
+        private const SpriteType Boar1Sprite = SpriteType.Boar1;
 
         public Boar1(int x, int y) 
             : base(x, y, Boar1SizeX, Boar1SizeY, Boar1CurrHP, Boar1MaxHP, 
