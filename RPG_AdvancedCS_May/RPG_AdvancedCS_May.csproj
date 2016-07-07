@@ -95,31 +95,38 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Structure\Abilities\Ability.cs" />
     <Compile Include="Structure\Abilities\AbilityEffectEnum.cs" />
-    <Compile Include="Structure\Abilities\ActiveAbility.cs" />
+    <Compile Include="Structure\Abilities\ActiveAbilityEnum.cs" />
     <Compile Include="Structure\Abilities\BasicAttack.cs" />
+    <Compile Include="Structure\Abilities\Charge.cs" />
     <Compile Include="Structure\Abilities\MeleeAbility.cs" />
     <Compile Include="Structure\Abilities\ReactionTypeEnum.cs" />
     <Compile Include="Structure\BoostItems\Axe.cs" />
     <Compile Include="Structure\BoostItems\Item.cs" />
     <Compile Include="Structure\BoostItems\Pineapple.cs" />
     <Compile Include="Structure\BoostItems\Shield.cs" />
+    <Compile Include="Structure\DisposableGameObject.cs" />
+    <Compile Include="Structure\Regions\MageHouseRegion.cs" />
+    <Compile Include="Structure\Regions\MageLayerRegion.cs" />
     <Compile Include="Structure\Regions\StartRegion.cs" />
     <Compile Include="Structure\Regions\ValleyRegion.cs" />
-    <Compile Include="Structure\Units\CharacterUnit.cs" />
+    <Compile Include="Structure\Units\Character\CharacterUnit.cs" />
     <Compile Include="Structure\Environment.cs" />
+    <Compile Include="Structure\Units\Character\Ranger.cs" />
+    <Compile Include="Structure\Units\Character\Wizard.cs" />
     <Compile Include="Structure\Units\EnemyUnits\Boar1.cs" />
     <Compile Include="Structure\Units\EnemyUnits\GiantCrab1.cs" />
-    <Compile Include="Structure\Units\FriendlyNPCUnit.cs" />
+    <Compile Include="Structure\Units\FriendlyUnits\FriendlyNPCUnit.cs" />
     <Compile Include="Structure\GameObject.cs" />
-    <Compile Include="Structure\Units\EnemyNPCUnit.cs" />
+    <Compile Include="Structure\Units\EnemyUnits\EnemyNPCUnit.cs" />
     <Compile Include="Structure\Gateway.cs" />
     <Compile Include="Structure\Obstacle.cs" />
     <Compile Include="Structure\Regions\Region.cs" />
     <Compile Include="Structure\Abilities\Projectile.cs" />
     <Compile Include="Structure\Abilities\Spell.cs" />
     <Compile Include="Structure\Structure.cs" />
+    <Compile Include="Structure\Units\FriendlyUnits\OldMage.cs" />
     <Compile Include="Structure\Units\Unit.cs" />
-    <Compile Include="Structure\Units\Warrior.cs" />
+    <Compile Include="Structure\Units\Character\Warrior.cs" />
     <Compile Include="UI\CustomControls\CustomPicBoxTag.cs" />
     <Compile Include="UI\CustomControls\CustomPictureBox.cs">
       <SubType>Component</SubType>
@@ -153,8 +160,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
-    <None Include="ClassDiagram3.cd" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -179,10 +184,13 @@
     <Content Include="Resources\crab1_22x16.png" />
     <Content Include="Resources\edolus.ico" />
     <Content Include="Resources\guy.png" />
+    <Content Include="Resources\mageHouseRegion_v1_720p.png" />
+    <Content Include="Resources\mageLayerRegion_v1_720p.png" />
     <Content Include="Resources\pineapple35x32.png" />
     <Content Include="Resources\shield32x32.png" />
     <Content Include="Resources\startRegion_v1_720p.png" />
     <Content Include="Resources\Sword_6x16.png" />
+    <Content Include="Resources\valleyRegion_v1_720p.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

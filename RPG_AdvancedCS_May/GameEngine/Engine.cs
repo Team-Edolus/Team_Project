@@ -1,4 +1,5 @@
 ﻿using System.Linq;
+using System.Windows.Forms;
 
 namespace RPG_AdvancedCS_May.GameEngine
 { 
@@ -56,6 +57,14 @@ namespace RPG_AdvancedCS_May.GameEngine
                 {
                     MovePlayerLeft();
                 };
+            _controller.On1Pressed += (sender, args) =>
+            {
+                this.ChangePlayerActiveAbility(args as KeyEventArgs);
+            };
+            _controller.On2Pressed += (sender, args) =>
+            {
+                this.ChangePlayerActiveAbility(args as KeyEventArgs);
+            };
             _controller.OnLeftMouseClick += (sender, args) =>
             {
                 var abilityArgs = args as AbilityEventArgs;
@@ -66,6 +75,22 @@ namespace RPG_AdvancedCS_May.GameEngine
             };
         }
 
+        private void ChangePlayerActiveAbility(KeyEventArgs args)
+        {
+            var key = string.Empty;
+            switch (args.KeyCode)
+            {
+                case Keys.D1:
+                    key = "1";
+                    break;
+                case Keys.D2:
+                    key = "2";
+                    break;
+                default:
+                    break;
+            }
+            this.regionEntities.Player.SetActiveAbility(key);
+        }
 
         //The if statements in the following four methods prevent the player from leaving the screen window
         private void MovePlayerUp()
@@ -116,6 +141,22 @@ namespace RPG_AdvancedCS_May.GameEngine
                     break;
                 }
             }
+            foreach (var enemy in this.regionEntities.Enemies)
+            {
+                if (DoIntersect(this.regionEntities.Player, enemy))
+                {
+                    colisionDetected = true;
+                    break;
+                }
+            }
+            foreach (var friendlyNpcUnit in this.regionEntities.FriendlyNPCs)
+            {
+                if (DoIntersect(this.regionEntities.Player, friendlyNpcUnit))
+                {
+                    colisionDetected = true;
+                    break;
+                }
+            }
             if (colisionDetected)
             {
                 this.regionEntities.Player.Relocate(buffX, buffY);
@@ -131,11 +172,11 @@ namespace RPG_AdvancedCS_May.GameEngine
             }
         }
 
-        private void UsePlayerAbility(int x, int y)
+        private void UsePlayerAbility(int mouseX, int mouseY)
         {
             if (this.regionEntities.Player is Warrior)
             {
-                var meleeAbility = ((Warrior)this.regionEntities.Player).MeleeAttack(x, y);
+                var meleeAbility = ((Warrior)this.regionEntities.Player).MeleeAttack(mouseX, mouseY);
                 //Ability Logic
                 if (meleeAbility == null) return;
                 if (meleeAbility is BasicAttack)
@@ -144,7 +185,21 @@ namespace RPG_AdvancedCS_May.GameEngine
                     this._painter.AddObject(meleeAbility as IRenderable);
                     this.ProcessAreaAbilityEffect(meleeAbility);
                 }
-                //else if..  - other melee abilities
+                else if(meleeAbility is Charge)
+                {
+                    var mouseRect = new DisposableGameObject(mouseX, mouseY, 1, 1);
+                    // Check range restr.
+                    if (DoIntersect(meleeAbility, mouseRect))
+                    {
+                        foreach (var enemyNpcUnit in this.regionEntities.Enemies)
+                        {
+                            if (DoIntersect(mouseRect, enemyNpcUnit))
+                            {
+                                this.regionEntities.Player.Relocate(mouseX, mouseY);
+                            }
+                        }
+                    } 
+                }
             }
             //else if.. - other character classes
         }
@@ -212,7 +267,7 @@ namespace RPG_AdvancedCS_May.GameEngine
                 this._painter.RemoveObject(deadUnit);
             }
         }
-        
+
 
         //----------------------------------------------------------------------------------------\\
         public void Update()

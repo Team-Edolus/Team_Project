@@ -8,7 +8,10 @@
     {
         private Image startRegionBGImage;
         private Image valleyRegionBGImage;
+        private Image mageLayerRegionBGImage;
+        private Image mageHouseRegionBGImage;
         private Image CharacterImage;
+        private Image OldMageNPCImage;
         private Image Boar1Image;
         private Image GiantCrab1Image;
         private Image BackgroundImage;
@@ -26,7 +29,10 @@
         {
             this.startRegionBGImage = Image.FromFile(Images.StartRegionBGImage);
             this.valleyRegionBGImage = Image.FromFile(Images.ValleyRegionBGImage);
+            this.mageLayerRegionBGImage = Image.FromFile(Images.MageLayerRegionBGImage);
+            this.mageHouseRegionBGImage = Image.FromFile(Images.MageHouseRegionBGImage);
             this.CharacterImage = Image.FromFile(Images.Character1ImagePath);
+            this.OldMageNPCImage = Image.FromFile(Images.OldMageNPCImagePath);
             this.Boar1Image = Image.FromFile(Images.BoarImagePath);
             this.GiantCrab1Image = Image.FromFile(Images.GiantCrab1ImagePath);
             this.BackgroundImage = Image.FromFile(Images.BackGroundImagePath);
@@ -47,8 +53,17 @@
                 case SpriteType.ValleyRegionBG:
                     image = this.valleyRegionBGImage;
                     break;
+                case SpriteType.MageLayerRegionBG:
+                    image = this.mageLayerRegionBGImage;
+                    break;
+                case SpriteType.MageHouseRegionBG:
+                    image = this.mageHouseRegionBGImage;
+                    break;
                 case SpriteType.Char1:
                     image = this.CharacterImage;
+                    break;
+                case SpriteType.OldMageNPC:
+                    image = this.OldMageNPCImage;
                     break;
                 case SpriteType.Boar1:
                     image = this.Boar1Image;

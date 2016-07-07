@@ -4,8 +4,10 @@
     {
         StartRegionBG,
         ValleyRegionBG,
+        MageLayerRegionBG,
+        MageHouseRegionBG,
         Char1,
-        Char2,
+        OldMageNPC,
         Boar1,
         GiantCrab1,
         Sword,

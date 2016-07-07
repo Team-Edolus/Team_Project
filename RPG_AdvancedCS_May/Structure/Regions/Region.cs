@@ -20,6 +20,7 @@
 
         protected Region() : base(DefaultX, DefaultY, DefaultSizeX, DefaultSizeY)
         {
+            this.RegionFriendlyNPCs = new List<FriendlyNPCUnit>();
             this.RegionEnemies = new List<EnemyNPCUnit>();
             this.RegionObstacles = new List<Obstacle>();
             this.RegionGateways = new List<Gateway>();
@@ -37,11 +38,14 @@
                 return _instance;
             }
         }
+
+        public List<FriendlyNPCUnit> RegionFriendlyNPCs { get; set; }
         public List<EnemyNPCUnit> RegionEnemies { get; set; }
         public List<Obstacle> RegionObstacles { get; set; }
         public List<Gateway> RegionGateways { get; set; }
         public SpriteType SpriteType { get; set; }
-        
+
+        protected abstract void SetFriendlyNPCs();
         protected abstract void SetEnemies();
         protected abstract void SetGateways();
         protected abstract void SetObstacles();
@@ -49,6 +53,7 @@
         protected void Initialise()
         {
             this.regionEntities = RegionEntities.GetInstance();
+            SetFriendlyNPCs();
             SetEnemies();
             SetGateways();
             SetObstacles();

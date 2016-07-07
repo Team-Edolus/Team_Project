@@ -20,6 +20,7 @@
         }
 
         public CharacterUnit Player { get; set; }
+        public List<FriendlyNPCUnit> FriendlyNPCs { get; set; }
         public List<EnemyNPCUnit> Enemies { get; set; }
         public List<Ability> Abilities { get; set; }
         public List<Obstacle> Obstacles { get; set; }
@@ -43,6 +44,10 @@
         private void AddNewGraphicObjects()
         {
             this.painter.SetBackground(this.currentRegion);
+            foreach (var friendlyNpcUnit in FriendlyNPCs)
+            {
+                this.painter.AddObject(friendlyNpcUnit);
+            }
             foreach (var enemy in this.Enemies)
             {
                 this.painter.AddObject(enemy);
@@ -53,6 +58,11 @@
         private void RemoveOldGraphicObjects()
         {
             this.painter.RemoveObject(this.Player);
+
+            foreach (var friendlyNpcUnit in FriendlyNPCs)
+            {
+                this.painter.RemoveObject(friendlyNpcUnit);
+            }
             foreach (var enemy in Enemies)
             {
                 this.painter.RemoveObject(enemy);
@@ -63,10 +73,17 @@
 
         private void LoadRegionEntities()
         {
+            this.FriendlyNPCs = new List<FriendlyNPCUnit>();
             this.Enemies = new List<EnemyNPCUnit>();
             this.Abilities = new List<Ability>();
             this.Obstacles = new List<Obstacle>();
             this.Gateways = new List<Gateway>();
+
+            foreach (var regionFriendlyNpC in this.currentRegion.RegionFriendlyNPCs)
+            {
+                this.FriendlyNPCs.Add(regionFriendlyNpC);
+            }
+
             foreach (var enemy in this.currentRegion.RegionEnemies)
             {
                 this.Enemies.Add(enemy);
@@ -84,32 +101,21 @@
         }
         private void SetupFirstRegion()
         {
-            this.currentRegion = StartRegion.Instance;
-            this.Player = new Warrior(300, 200);
+            this.currentRegion = MageLayerRegion.Instance;
+            //this.currentRegion = StartRegion.Instance;
+            this.Player = new Warrior(1000, 200);
             this.LoadRegionEntities();
             this.AddNewGraphicObjects();
         }
 
-        public void InitialiseStartRegion()
+        public void InitialiseNewRegion(IRegionInterface newRegion)
         {
             this.RemoveOldGraphicObjects();
 
-            this.currentRegion = StartRegion.Instance;
+            this.currentRegion = newRegion;
             this.LoadRegionEntities();
 
             this.AddNewGraphicObjects();
         }
-
-        public void InitialiseValleyRegion()
-        {
-            this.RemoveOldGraphicObjects();
-            //
-            this.currentRegion = ValleyRegion.Instance;
-            this.LoadRegionEntities();
-            //Set new player coordinates
-            this.AddNewGraphicObjects();
-        }
-
-        //
     }
 }

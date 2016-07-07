@@ -60,7 +60,7 @@
             this.Y = y;
         }
 
-    public virtual ReactionTypeEnum ReactToAbility(AbilityEffectEnum abilityEffect)
+        public virtual ReactionTypeEnum ReactToAbility(AbilityEffectEnum abilityEffect)
         {
             switch (abilityEffect)
             {

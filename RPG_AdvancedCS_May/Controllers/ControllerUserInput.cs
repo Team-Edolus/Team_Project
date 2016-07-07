@@ -11,6 +11,8 @@
         public event EventHandler OnLeftPressed;
         public event EventHandler OnUpPressed;
         public event EventHandler OnDownPressed;
+        public event EventHandler On1Pressed;
+        public event EventHandler On2Pressed;
 
         public event EventHandler OnLeftMouseClick;
         
@@ -42,6 +44,12 @@
                     break;
                 case Keys.A:
                     this.OnLeftPressed?.Invoke(this, new EventArgs());
+                    break;
+                case Keys.D1:
+                    this.On1Pressed?.Invoke(this, e);
+                    break;
+                case Keys.D2:
+                    this.On2Pressed?.Invoke(this, e);
                     break;
                 default:
                     break;

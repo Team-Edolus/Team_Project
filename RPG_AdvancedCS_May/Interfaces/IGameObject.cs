@@ -1,6 +1,5 @@
 ﻿namespace RPG_AdvancedCS_May.Interfaces
 {
-
     public interface IGameObject
     {
         int X { get; set; }

@@ -24,9 +24,15 @@
 
         public MeleeAbility MeleeAttack(int mouseX, int mouseY)
         {
-            //MessageBox.Show($"MeleeAttack: {mouseX}-{mouseY} \n {this.DetermineAbilityDirection(mouseX, mouseY).ToString()}");
-            //TO DO: Check for active ability from action bar
-            return this.UseBasicAttack(mouseX, mouseY);
+            switch (activeAbility)
+            {
+                case ActiveAbilityEnum.FirstAbility:
+                    return this.UseBasicAttack(mouseX, mouseY);
+                case ActiveAbilityEnum.SecondAbility:
+                    return this.UseCharge();
+                default:
+                    throw new ArgumentException("No such warrior ability.");
+            }
         }
 
         private BasicAttack UseBasicAttack(int mouseX, int mouseY)
@@ -76,6 +82,15 @@
                     throw new ArgumentException("Unexisting direction");
             }
             return new BasicAttack(abilityX, abilityY, abilitySizeX, abilitySizeY, abilityVisualX, abilityVisualY, this);
+        }
+
+        private Charge UseCharge()
+        {
+            var newAbilityX = this.X - 48;
+            var newAbilityY = this.Y - 48;
+            var newAbilitySizeX = 112;
+            var newAbilitySizeY = 112;
+            return new Charge(newAbilityX, newAbilityY, newAbilitySizeX, newAbilitySizeY, this);
         }
     }
 }

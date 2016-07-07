@@ -146,7 +146,7 @@
             this.LBL_Developer1.Name = "LBL_Developer1";
             this.LBL_Developer1.Size = new System.Drawing.Size(92, 28);
             this.LBL_Developer1.TabIndex = 15;
-            this.LBL_Developer1.Text = "mp3_ico";
+            this.LBL_Developer1.Text = "Inforser";
             // 
             // LBL_MoveLeft
             // 
