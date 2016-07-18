@@ -1,50 +1,12 @@
-C:\Users\Dell\Desktop\team\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.exe.config
-C:\Users\Dell\Desktop\team\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.exe
-C:\Users\Dell\Desktop\team\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.pdb
-C:\Users\Dell\Desktop\team\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.csprojResolveAssemblyReference.cache
-C:\Users\Dell\Desktop\team\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.GameWindow.resources
-C:\Users\Dell\Desktop\team\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.InitialScreen.resources
-C:\Users\Dell\Desktop\team\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.Properties.Resources.resources
-C:\Users\Dell\Desktop\team\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.csproj.GenerateResource.Cache
-C:\Users\Dell\Desktop\team\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.exe
-C:\Users\Dell\Desktop\team\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.pdb
-C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.exe.config
-C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.exe
-C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.pdb
-C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.exe
-C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.pdb
-C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.csprojResolveAssemblyReference.cache
-C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.GameWindow.resources
-C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.InitialScreen.resources
-C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.Properties.Resources.resources
-C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.csproj.GenerateResource.Cache
-C:\Users\User\Desktop\Game2\trunk\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.exe.config
-C:\Users\User\Desktop\Game2\trunk\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.exe
-C:\Users\User\Desktop\Game2\trunk\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.pdb
-C:\Users\user17\Desktop\Tem\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.exe.config
-C:\Users\user17\Desktop\Tem\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.exe
-C:\Users\user17\Desktop\Tem\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.pdb
-C:\Users\user17\Desktop\Tem\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.exe
-C:\Users\user17\Desktop\Tem\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.pdb
-C:\Users\user17\Desktop\Tem\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.csprojResolveAssemblyReference.cache
-C:\Users\user17\Desktop\Tem\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.GameWindow.resources
-C:\Users\user17\Desktop\Tem\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.InitialScreen.resources
-C:\Users\user17\Desktop\Tem\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.Properties.Resources.resources
-C:\Users\user17\Desktop\Tem\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.csproj.GenerateResource.Cache
-C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.exe.config
-C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.exe
-C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.pdb
-C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.GameWindow.resources
-C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.Properties.Resources.resources
-C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.csproj.GenerateResource.Cache
-C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.InitialScreen.resources
-C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.exe
-C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.pdb
-D:\Dropbox\SoftUni\AdvancedC#\TeamProject\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.exe.config
-D:\Dropbox\SoftUni\AdvancedC#\TeamProject\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.exe
-D:\Dropbox\SoftUni\AdvancedC#\TeamProject\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.pdb
-C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.FormCredits.resources
-C:\Users\Plamen\Desktop\SOFTUNI.BG\Advanced C#\GAME\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.FormOptions.resources
-C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.FormCredits.resources
-C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.FormOptions.resources
-C:\Users\Inforser\Desktop\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.csprojResolveAssemblyReference.cache
+C:\Users\Dell\Desktop\Game\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.exe.config
+C:\Users\Dell\Desktop\Game\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.exe
+C:\Users\Dell\Desktop\Game\Team_Project\RPG_AdvancedCS_May\bin\Debug\RPG_AdvancedCS_May.pdb
+C:\Users\Dell\Desktop\Game\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.csprojResolveAssemblyReference.cache
+C:\Users\Dell\Desktop\Game\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.FormCredits.resources
+C:\Users\Dell\Desktop\Game\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.FormOptions.resources
+C:\Users\Dell\Desktop\Game\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.GameWindow.resources
+C:\Users\Dell\Desktop\Game\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.InitialScreen.resources
+C:\Users\Dell\Desktop\Game\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.Properties.Resources.resources
+C:\Users\Dell\Desktop\Game\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.csproj.GenerateResource.Cache
+C:\Users\Dell\Desktop\Game\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.exe
+C:\Users\Dell\Desktop\Game\Team_Project\RPG_AdvancedCS_May\obj\Debug\RPG_AdvancedCS_May.pdb

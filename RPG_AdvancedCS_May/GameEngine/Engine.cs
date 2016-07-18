@@ -209,13 +209,17 @@ namespace RPG_AdvancedCS_May.GameEngine
             var hitTargets = this.regionEntities.Enemies.Where(e => this.DoIntersect(ability, e)).ToList();
             foreach (var hitEnemy in hitTargets)
             {
-                var reaction = hitEnemy.ReactToAbility(ability.AbilityEffect);
+                var reaction = hitEnemy.ReactToAbility(ability.AbilityEffect); 
                 switch (reaction)
                 {
                     case ReactionTypeEnum.TakeDamage:
                         {
                             var damage = ability.Power + ability.Caster.AttackPoints - hitEnemy.DefensePoints;
                             hitEnemy.CurrentHP -= damage;
+                            //tuk li e miastoto da napisha dmg det vrushta praseto?
+                            var damageBack = hitEnemy.AttackPoints;// znam che moje da se osuvurshenstva tuk!
+                            //i  kolko hp mu ostava
+                            regionEntities.Player.CurrentHP -= damageBack;
                             break;
                         }
                     case ReactionTypeEnum.TakeHeal:

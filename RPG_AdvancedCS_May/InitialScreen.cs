@@ -1,13 +1,20 @@
 ﻿using System;
 using System.Windows.Forms;
 
+
 namespace RPG_AdvancedCS_May
 {
-    public partial class InitialScreen : Form
+    public partial class InitialScreen : Form 
     {
+        //deni code
+        System.Media.SoundPlayer player = new System.Media.SoundPlayer();
+        
+        //end deni code
         public InitialScreen()
         {
             InitializeComponent();
+            //deni
+            player.SoundLocation = "../../Resources/bgMusic.wav";
         }
 
         private void InitialScreen_Load(object sender, EventArgs e)
@@ -21,6 +28,9 @@ namespace RPG_AdvancedCS_May
             gameWindow.FormClosed += new FormClosedEventHandler(gameWindow_FormClosed);
             this.Hide();
             gameWindow.Show();
+
+            //deni
+            player.Play();
         }
 
         void gameWindow_FormClosed(object sender, FormClosedEventArgs e)
