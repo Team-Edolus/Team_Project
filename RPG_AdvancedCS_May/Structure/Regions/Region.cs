@@ -4,6 +4,7 @@
     using Interfaces;
     using Graphics;
     using GameEngine;
+    using System;
 
     public abstract class Region<T> : GameObject, IRegionInterface
         where T : Region<T>, new()
@@ -24,6 +25,7 @@
             this.RegionEnemies = new List<EnemyNPCUnit>();
             this.RegionObstacles = new List<Obstacle>();
             this.RegionGateways = new List<Gateway>();
+            this.RegionItems = new List<Item>();
             this.isInitialised = false;
         }
 
@@ -44,11 +46,15 @@
         public List<Obstacle> RegionObstacles { get; set; }
         public List<Gateway> RegionGateways { get; set; }
         public SpriteType SpriteType { get; set; }
+        public List<Item> RegionItems { get; set; }
+
+     
 
         protected abstract void SetFriendlyNPCs();
         protected abstract void SetEnemies();
         protected abstract void SetGateways();
         protected abstract void SetObstacles();
+        protected abstract void SetBoostItems();
 
         protected void Initialise()
         {
@@ -57,6 +63,10 @@
             SetEnemies();
             SetGateways();
             SetObstacles();
+            SetBoostItems();
+            
         }
+
+
     }
 }

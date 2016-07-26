@@ -5,14 +5,13 @@
 
     public abstract class Item : GameObject, IRenderable
     {
-        protected Item(int sizeX, int sizeY, int x, int y, SpriteType sprite, 
-            int healthPointsBoost, int damagePointBoost, int defensePointsBoost) 
-            : base(sizeX, sizeY, x, y)
+        protected Item(int x, int y, int sizeX, int sizeY, int healthBoost, int damageBoost, int defenseBoost, SpriteType spriteType) : base(x, y, sizeX, sizeY)
         {
-            this.HealthPointsBoost = healthPointsBoost;
-            this.DamagePointsBoost = damagePointBoost;
-            this.DefensePointsBoost = defensePointsBoost;
-            this.SpriteType = sprite;
+            this.SpriteType = spriteType;
+            this.HealthPointsBoost = healthBoost;
+            this.DamagePointsBoost = damageBoost;
+            this.DefensePointsBoost = defenseBoost;
+            hasBeenUsed = false;
         }
 
         public int HealthPointsBoost { get; set; }
@@ -27,6 +26,6 @@
         }
 
         public SpriteType SpriteType { get; set; }
-
+        public bool hasBeenUsed { get; set; }
     }
 }

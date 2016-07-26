@@ -1,5 +1,6 @@
 ﻿namespace RPG_AdvancedCS_May.Structure
 {
+    using System;
     using Graphics;
     public class MageLayerRegion : Region<MageLayerRegion>
     {
@@ -32,6 +33,11 @@
         protected override void SetObstacles()
         {
 
+        }
+
+        protected override void SetBoostItems()
+        {
+            this.RegionItems.Add(new Shield(1100, 280));
         }
     }
 }

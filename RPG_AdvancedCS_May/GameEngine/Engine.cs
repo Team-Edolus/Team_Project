@@ -2,7 +2,7 @@
 using System.Windows.Forms;
 
 namespace RPG_AdvancedCS_May.GameEngine
-{ 
+{
     using System;
 
     using Interfaces;
@@ -13,7 +13,7 @@ namespace RPG_AdvancedCS_May.GameEngine
         private IUserInputInterface _controller;
         private IPaintInterface _painter;
         private int _timeInterval;
-        private RegionEntities regionEntities;
+        private RegionEntities regionEntities;     //should use regionEntitiesInterface
 
         //private CharacterUnit _player;
         //private List<EnemyNPCUnit> _enemies;
@@ -31,12 +31,12 @@ namespace RPG_AdvancedCS_May.GameEngine
             SubscribeToController();
         }
 
-        private void InitialiseItems()
-        {
-            var shield = new Shield();
-            _painter.AddObject(shield);
-        }
-      
+        //private void InitialiseItems()
+        //{
+        //    var shield = new Shield(250, 250);
+        //    _painter.AddObject(shield);
+        //}
+
         //================================================
 
         private void SubscribeToController()
@@ -157,6 +157,18 @@ namespace RPG_AdvancedCS_May.GameEngine
                     break;
                 }
             }
+
+            foreach (var item in this.regionEntities.Items)
+            {
+                if (DoIntersect(this.regionEntities.Player, item))
+                {
+                    //colisionDetected = true;
+                    //break;
+                    ApplyItemEffext(item,this.regionEntities.Player);
+                    item.hasBeenUsed = true;
+                }
+            }
+
             if (colisionDetected)
             {
                 this.regionEntities.Player.Relocate(buffX, buffY);
@@ -172,6 +184,12 @@ namespace RPG_AdvancedCS_May.GameEngine
             }
         }
 
+        private void ApplyItemEffext(Item item, CharacterUnit player)
+        {
+            item.ApplyItemEffects(player);
+            this._painter.RedrawObjectWithAShield(player);                      
+        }
+
         private void UsePlayerAbility(int mouseX, int mouseY)
         {
             if (this.regionEntities.Player is Warrior)
@@ -185,7 +203,7 @@ namespace RPG_AdvancedCS_May.GameEngine
                     this._painter.AddObject(meleeAbility as IRenderable);
                     this.ProcessAreaAbilityEffect(meleeAbility);
                 }
-                else if(meleeAbility is Charge)
+                else if (meleeAbility is Charge)
                 {
                     var mouseRect = new DisposableGameObject(mouseX, mouseY, 1, 1);
                     // Check range restr.
@@ -198,7 +216,7 @@ namespace RPG_AdvancedCS_May.GameEngine
                                 this.regionEntities.Player.Relocate(mouseX, mouseY);
                             }
                         }
-                    } 
+                    }
                 }
             }
             //else if.. - other character classes
@@ -209,7 +227,7 @@ namespace RPG_AdvancedCS_May.GameEngine
             var hitTargets = this.regionEntities.Enemies.Where(e => this.DoIntersect(ability, e)).ToList();
             foreach (var hitEnemy in hitTargets)
             {
-                var reaction = hitEnemy.ReactToAbility(ability.AbilityEffect); 
+                var reaction = hitEnemy.ReactToAbility(ability.AbilityEffect);
                 switch (reaction)
                 {
                     case ReactionTypeEnum.TakeDamage:
@@ -222,6 +240,9 @@ namespace RPG_AdvancedCS_May.GameEngine
                             regionEntities.Player.CurrentHP -= damageBack;
                             break;
                         }
+                    case ReactionTypeEnum.TakeShield:
+                        var itemToCollect = this.regionEntities.Items.FirstOrDefault();
+                        break;
                     case ReactionTypeEnum.TakeHeal:
                         break;
                     case ReactionTypeEnum.TakeBuff:
@@ -248,8 +269,8 @@ namespace RPG_AdvancedCS_May.GameEngine
             int RectBY1 = objB.Y;
             int RectBY2 = objB.Y + objB.SizeY;
             if (RectAX1 < RectBX2 &&
-                RectAX2 > RectBX1 && 
-                RectAY1 < RectBY2 && 
+                RectAX2 > RectBX1 &&
+                RectAY1 < RectBY2 &&
                 RectAY2 > RectBY1)
             {
                 return true;
@@ -272,11 +293,22 @@ namespace RPG_AdvancedCS_May.GameEngine
             }
         }
 
+        private void RemoveUsedItems()
+        {
+            var usedItems = this.regionEntities.Items.Where(e => e.hasBeenUsed).ToList();
+            foreach (var usedItem in usedItems)
+            {
+                this.regionEntities.Items.Remove(usedItem);
+                this._painter.RemoveObject(usedItem);
+            }
+        }
+
 
         //----------------------------------------------------------------------------------------\\
         public void Update()
         {
             this.RemoveDeadUnits();
+            this.RemoveUsedItems();
             this._painter.RedrawObject(this.regionEntities.Player);
             this.regionEntities.Enemies.ForEach(this._painter.RedrawObject);
             this.regionEntities.Abilities.ForEach(a => a.CurrentLifespanInMS += this._timeInterval);

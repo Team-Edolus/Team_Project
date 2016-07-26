@@ -1,5 +1,6 @@
 ﻿namespace RPG_AdvancedCS_May.Structure
 {
+    using System;
     using Graphics;
     public class MageHouseRegion : Region<MageHouseRegion>
     {
@@ -29,6 +30,11 @@
         protected override void SetObstacles()
         {
 
+        }
+
+        protected override void SetBoostItems()
+        {
+         
         }
     }
 }

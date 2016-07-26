@@ -8,6 +8,8 @@
 
         void RedrawObject(IRenderable renderableObject);
 
+        void RedrawObjectWithAShield(IRenderable renderableObject);
+
         void SetBackground(IRenderable renderableObject);
     }
 }
