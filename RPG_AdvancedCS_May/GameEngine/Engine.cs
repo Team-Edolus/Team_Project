@@ -36,7 +36,7 @@ namespace RPG_AdvancedCS_May.GameEngine
             var shield = new Shield();
             _painter.AddObject(shield);
         }
-      
+        
         //================================================
 
         private void SubscribeToController()

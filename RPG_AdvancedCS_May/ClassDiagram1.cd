@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="RPG_AdvancedCS_May.Controllers.ControllerUserInput" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="37" Y="0.5" Width="1.5" />
+    <Position X="51.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAAAAAEAAkAAAAAIAAAAAEgAAAAAACAA=</HashCode>
       <FileName>Controllers\ControllerUserInput.cs</FileName>
@@ -9,96 +9,96 @@
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
   <Class Name="RPG_AdvancedCS_May.FormCredits" Collapsed="true">
-    <Position X="38.75" Y="1.5" Width="1.5" />
+    <Position X="53" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AMAAKIAAAmAAAEAgAACQAACCAAAAAAABAAAAAKEAAAA=</HashCode>
       <FileName>FormCredits.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.FormOptions" Collapsed="true">
-    <Position X="40.5" Y="1.5" Width="1.5" />
+    <Position X="54.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAEA=</HashCode>
       <FileName>FormOptions.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.GameWindow" Collapsed="true">
-    <Position X="33.5" Y="2.5" Width="1.5" />
+    <Position X="47.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAQAAgAAAAA=</HashCode>
       <FileName>GameWindow.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.InitialScreen" Collapsed="true">
-    <Position X="38.75" Y="2.5" Width="1.5" />
+    <Position X="53" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAACAAEAAAAACAAACCAgAEEAAAAAQAAAAACAI=</HashCode>
       <FileName>InitialScreen.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.Startup" Collapsed="true">
-    <Position X="33.5" Y="4.5" Width="1.5" />
+    <Position X="47.75" Y="4.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Startup.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.GameEngine.AbilityEventArgs" Collapsed="true">
-    <Position X="33.5" Y="0.5" Width="1.5" />
+    <Position X="47.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GameEngine\AbilityEventArgs.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.GameEngine.CollisionHandler" Collapsed="true">
-    <Position X="35.25" Y="0.5" Width="1.5" />
+    <Position X="49.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>GameEngine\CollisionHandler.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.GameEngine.Engine" Collapsed="true">
-    <Position X="37" Y="1.5" Width="1.5" />
+    <Position X="51.25" Y="1.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAwAAAAAAAAACACAAIAgAAAAECAAAAAAAgwACGgEAAA=</HashCode>
+      <HashCode>AAwAAAAAAAAACACAAIAgAAAAECAAQAAAAgwACGgEAAA=</HashCode>
       <FileName>GameEngine\Engine.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.GameEngine.RegionEntities" Collapsed="true">
-    <Position X="35.25" Y="3.5" Width="1.5" />
+    <Position X="49.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AgAAAUCAAgAUAAAAIACAIAAABAFAAAAAAAAAAQAQAAI=</HashCode>
       <FileName>GameEngine\RegionEntities.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.Graphics.ImageHandler" Collapsed="true">
-    <Position X="35.25" Y="2.5" Width="1.5" />
+    <Position X="49.5" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AEEEAAAgAAAAAQJIAABAAAoAAAACBAAAAAAIAAAAAIA=</HashCode>
       <FileName>Graphics\ImageHandler.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.Graphics.Images" Collapsed="true">
-    <Position X="37" Y="2.5" Width="1.5" />
+    <Position X="51.25" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAJCERAAAAAABBgAAIIIAAAAAAAQAA=</HashCode>
       <FileName>Graphics\Images.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.Properties.Resources" Collapsed="true">
-    <Position X="37" Y="3.5" Width="1.5" />
+    <Position X="51.25" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAIAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.Properties.Settings" Collapsed="true">
-    <Position X="38.75" Y="3.5" Width="1.5" />
+    <Position X="53" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.Ability" Collapsed="true">
-    <Position X="13" Y="2.25" Width="1.5" />
+    <Position X="3.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAgAAKEAAAAAAAAAIAgAMAAAAAAAABAAAAADAAAAA=</HashCode>
       <FileName>Structure\Abilities\Ability.cs</FileName>
@@ -106,22 +106,29 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.BasicAttack" Collapsed="true">
-    <Position X="9" Y="6" Width="1.5" />
+    <Position X="2.5" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AMAAAAAAACAAAAAAAAAAgAAAAAAAAAAAAAACAEAABAA=</HashCode>
       <FileName>Structure\Abilities\BasicAttack.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+  <Class Name="RPG_AdvancedCS_May.Structure.Charge" Collapsed="true">
+    <Position X="4.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIACAAAAAAAAAAAAAAAAIEBAAAAAAAAAAAAAAAQAAA=</HashCode>
+      <FileName>Structure\Abilities\Charge.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.MeleeAbility" Collapsed="true">
-    <Position X="11.25" Y="4" Width="1.5" />
+    <Position X="3.75" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Structure\Abilities\MeleeAbility.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.Projectile" Collapsed="true">
-    <Position X="8.5" Y="1.75" Width="1.5" />
+    <Position X="31.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAACAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Structure\Abilities\Projectile.cs</FileName>
@@ -129,21 +136,21 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.Spell" Collapsed="true">
-    <Position X="40.5" Y="3.5" Width="1.5" />
+    <Position X="54.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Structure\Abilities\Spell.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.Axe" Collapsed="true">
-    <Position X="19.75" Y="3.25" Width="1.5" />
+    <Position X="7" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAIAAAACAAAAGAAAAIAAAAABAAAAAAAAAAAAIA=</HashCode>
       <FileName>Structure\BoostItems\Axe.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.Item" Collapsed="true">
-    <Position X="19.5" Y="2" Width="1.5" />
+    <Position X="9.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAACAACAAAAAAAAQAAAAAAAAAAEAAAEAAAAA=</HashCode>
       <FileName>Structure\BoostItems\Item.cs</FileName>
@@ -151,28 +158,35 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.Pineapple" Collapsed="true">
-    <Position X="22" Y="3.25" Width="1.5" />
+    <Position X="9.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAAAAoAAAAIAABgAEAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Structure\BoostItems\Pineapple.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.Shield" Collapsed="true">
-    <Position X="17.5" Y="3.25" Width="1.5" />
+    <Position X="11.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAgAABAAAIQBAAAAAEA=</HashCode>
       <FileName>Structure\BoostItems\Shield.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="RPG_AdvancedCS_May.Structure.DisposableGameObject" Collapsed="true">
+    <Position X="22.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Structure\DisposableGameObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.Environment" Collapsed="true">
-    <Position X="4" Y="1.75" Width="1.5" />
+    <Position X="27.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Structure\Environment.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.GameObject" Collapsed="true">
-    <Position X="16.5" Y="0.5" Width="1.5" />
+    <Position X="24" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAABAAYAA=</HashCode>
       <FileName>Structure\GameObject.cs</FileName>
@@ -180,21 +194,35 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.Gateway" Collapsed="true">
-    <Position X="4" Y="3.25" Width="1.5" />
+    <Position X="25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AABAAAAAAAAAAAAAAAAAAIABAAAAAAACAAAAACAAAAA=</HashCode>
       <FileName>Structure\Gateway.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.Obstacle" Collapsed="true">
-    <Position X="6.25" Y="3.25" Width="1.5" />
+    <Position X="27.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Structure\Obstacle.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="RPG_AdvancedCS_May.Structure.MageHouseRegion" Collapsed="true">
+    <Position X="13.75" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAABAAAAAAAAAEAAgAAAAAAAAA=</HashCode>
+      <FileName>Structure\Regions\MageHouseRegion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_AdvancedCS_May.Structure.MageLayerRegion" Collapsed="true">
+    <Position X="16" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAABAAAAAAAAAEAAgAAAAAAAAA=</HashCode>
+      <FileName>Structure\Regions\MageLayerRegion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.Region&lt;T&gt;" Collapsed="true">
-    <Position X="15.5" Y="5.25" Width="1.5" />
+    <Position X="17.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAA6QIAAQAAAAAABAAAAAAAAAECSggAAEAABAA=</HashCode>
       <FileName>Structure\Regions\Region.cs</FileName>
@@ -202,21 +230,21 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.StartRegion" Collapsed="true">
-    <Position X="15.25" Y="7.5" Width="1.5" />
+    <Position X="18.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAIAAAAAAAAABAAAAAAAAAEAAgAAAAAAAAA=</HashCode>
       <FileName>Structure\Regions\StartRegion.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.ValleyRegion" Collapsed="true">
-    <Position X="19.5" Y="7.5" Width="1.5" />
+    <Position X="20.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAIAAAAAAAAABAAAAAAAAAEAAgAAAAAAAAA=</HashCode>
       <FileName>Structure\Regions\ValleyRegion.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.Structure" Collapsed="true">
-    <Position X="1.75" Y="3.25" Width="1.5" />
+    <Position X="29.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>Structure\Structure.cs</FileName>
@@ -224,235 +252,242 @@
     <Lollipop Position="0.2" />
   </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.CharacterUnit" Collapsed="true">
-    <Position X="24.25" Y="3.25" Width="1.5" />
+    <Position X="43" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <HashCode>AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>Structure\Units\Character\CharacterUnit.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="RPG_AdvancedCS_May.Structure.EnemyNPCUnit" Collapsed="true">
-    <Position X="27.75" Y="3.25" Width="1.5" />
+  <Class Name="RPG_AdvancedCS_May.Structure.Ranger" Collapsed="true">
+    <Position X="40.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Structure\Units\EnemyUnits\EnemyNPCUnit.cs</FileName>
+      <FileName>Structure\Units\Character\Ranger.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_AdvancedCS_May.Structure.Warrior" Collapsed="true">
+    <Position X="43" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAAAQAAAAAAgABAAAAAAAAAAAAAAAAAAAQAAAIABDA=</HashCode>
+      <FileName>Structure\Units\Character\Warrior.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="RPG_AdvancedCS_May.Structure.Wizard" Collapsed="true">
+    <Position X="45.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Structure\Units\Character\Wizard.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.Boar1" Collapsed="true">
-    <Position X="26.5" Y="4.75" Width="1.5" />
+    <Position X="34" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAABAAAAAAACAAgAAAABggAAAAAACAABAA=</HashCode>
       <FileName>Structure\Units\EnemyUnits\Boar1.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="RPG_AdvancedCS_May.Structure.EnemyNPCUnit" Collapsed="true">
+    <Position X="35.25" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Structure\Units\EnemyUnits\EnemyNPCUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.GiantCrab1" Collapsed="true">
-    <Position X="28.75" Y="4.75" Width="1.5" />
+    <Position X="36.25" Y="4.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAACIAAAAAAAAAAAAAAAAAAAAAAQAhAAAAAAQ=</HashCode>
       <FileName>Structure\Units\EnemyUnits\GiantCrab1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.FriendlyNPCUnit" Collapsed="true">
-    <Position X="31" Y="3.25" Width="1.5" />
+    <Position X="38.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAACAAACAAAAAAAAAAAAAAAAAAAAAAACAACAEAAAAAA=</HashCode>
       <FileName>Structure\Units\FriendlyUnits\FriendlyNPCUnit.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="RPG_AdvancedCS_May.Structure.OldMage" Collapsed="true">
+    <Position X="38.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAIAAAAAAAAAAAAAAEAEAAAAAAA=</HashCode>
+      <FileName>Structure\Units\FriendlyUnits\OldMage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.Unit" Collapsed="true">
-    <Position X="27.75" Y="1.75" Width="1.5" />
+    <Position X="39.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAIAABAAAAKAAEAAIAAgAAAAAQAAAAUAAQAA=</HashCode>
       <FileName>Structure\Units\Unit.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="RPG_AdvancedCS_May.Structure.Warrior" Collapsed="true">
-    <Position X="24.25" Y="4.75" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>EAAAAQAAAAAAgABAAAAAAAAAAAAAAAAAAAQAAAIABDA=</HashCode>
-      <FileName>Structure\Units\Character\Warrior.cs</FileName>
-    </TypeIdentifier>
-    <Lollipop Position="0.2" />
-  </Class>
   <Class Name="RPG_AdvancedCS_May.UI.CustomPicBoxTag" Collapsed="true">
-    <Position X="38.75" Y="0.5" Width="1.5" />
+    <Position X="53" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UI\CustomControls\CustomPicBoxTag.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.UI.CustomPictureBox" Collapsed="true">
-    <Position X="40.5" Y="0.5" Width="1.5" />
+    <Position X="54.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>UI\CustomControls\CustomPictureBox.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.UI.CustomProgBarTag" Collapsed="true">
-    <Position X="33.5" Y="1.5" Width="1.5" />
+    <Position X="47.75" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAIAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UI\CustomControls\CustomProgBarTag.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.UI.CustomProgressBar" Collapsed="true">
-    <Position X="35.25" Y="1.5" Width="1.5" />
+    <Position X="49.5" Y="1.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAA=</HashCode>
       <FileName>UI\CustomControls\CustomProgressBar.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.UI.ModifyProgressBarColor" Collapsed="true">
-    <Position X="40.5" Y="2.5" Width="1.5" />
+    <Position X="54.75" Y="2.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAABAAAAAAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>UI\ModifyProgressBarColor.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.UI.PaintBrush" Collapsed="true" BaseTypeListCollapsed="true">
-    <Position X="33.5" Y="3.5" Width="1.5" />
+    <Position X="47.75" Y="3.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAQBCQQASAEAAIAAIIAAAAgBAIAAAAAAAAAAAAAABA=</HashCode>
       <FileName>UI\PaintBrush.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
-  <Class Name="RPG_AdvancedCS_May.Structure.MageHouseRegion" Collapsed="true">
-    <Position X="17.5" Y="7.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAIAAAAAAAAABAAAAAAAAAEAAgAAAAAAAAA=</HashCode>
-      <FileName>Structure\Regions\MageHouseRegion.cs</FileName>
-    </TypeIdentifier>
-  </Class>
-  <Class Name="RPG_AdvancedCS_May.Structure.MageLayerRegion" Collapsed="true">
-    <Position X="13.5" Y="7.5" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAIAAAAAAAAABAAAAAAAAAEAAgAAAAAAAAA=</HashCode>
-      <FileName>Structure\Regions\MageLayerRegion.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Struct Name="RPG_AdvancedCS_May.GameEngine.Direction" Collapsed="true">
-    <Position X="33.5" Y="5.75" Width="1.5" />
+    <Position X="47.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwAAAAAAA=</HashCode>
       <FileName>GameEngine\Direction.cs</FileName>
     </TypeIdentifier>
   </Struct>
   <Interface Name="RPG_AdvancedCS_May.Interfaces.IAbility" Collapsed="true">
-    <Position X="33.5" Y="7" Width="1.5" />
+    <Position X="47.75" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAACAAAAAAAAAAIAgAMAAAAAAAABAAAAABAAAAA=</HashCode>
       <FileName>Interfaces\IAbility.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="RPG_AdvancedCS_May.Interfaces.IAbilityUseable" Collapsed="true">
-    <Position X="35.25" Y="7" Width="1.5" />
+    <Position X="49.5" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
       <FileName>Interfaces\IAbilityUseable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="RPG_AdvancedCS_May.Interfaces.IGameObject" Collapsed="true">
-    <Position X="1.75" Y="4.5" Width="1.5" />
+    <Position X="1.75" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAABAAYAA=</HashCode>
       <FileName>Interfaces\IGameObject.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="RPG_AdvancedCS_May.Interfaces.IMeleeAttacking" Collapsed="true">
-    <Position X="37" Y="7" Width="1.5" />
+    <Position X="51.25" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IMeleeAttacking.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="RPG_AdvancedCS_May.Interfaces.IMoveable" Collapsed="true">
-    <Position X="38.75" Y="7" Width="1.5" />
+    <Position X="53" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAIAAAAAAACAAAAAAAAgAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IMoveable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="RPG_AdvancedCS_May.Interfaces.IPaintInterface" Collapsed="true">
-    <Position X="40.5" Y="7" Width="1.5" />
+    <Position X="54.75" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAAACAAAAAAAAAAAAAAAAAgBAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\IPaintInterface.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="RPG_AdvancedCS_May.Interfaces.IRegionInterface" Collapsed="true">
-    <Position X="2.75" Y="7.25" Width="1.5" />
+    <Position X="0.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
       <FileName>Interfaces\IRegionInterface.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="RPG_AdvancedCS_May.Interfaces.IRenderable" Collapsed="true">
-    <Position X="2.75" Y="5.75" Width="1.5" />
+    <Position X="0.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
       <FileName>Interfaces\IRenderable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="RPG_AdvancedCS_May.Interfaces.ISpellCastable" Collapsed="true">
-    <Position X="33.5" Y="7.75" Width="1.5" />
+    <Position X="47.75" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\ISpellCastable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="RPG_AdvancedCS_May.Interfaces.ITimeoutable" Collapsed="true">
-    <Position X="35.25" Y="7.75" Width="1.5" />
+    <Position X="49.5" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAAgAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Interfaces\ITimeoutable.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="RPG_AdvancedCS_May.Interfaces.IUnit" Collapsed="true">
-    <Position X="0.5" Y="5.75" Width="1.5" />
+    <Position X="2.75" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAAAAAAIAAEAAIAAAAAAAAAAAAAQAAQAA=</HashCode>
       <FileName>Interfaces\IUnit.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Interface Name="RPG_AdvancedCS_May.Interfaces.IUserInputInterface" Collapsed="true">
-    <Position X="37" Y="7.75" Width="1.5" />
+    <Position X="51.25" Y="7.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAQAAAAAAAAEAAkAAAAAAAAAAAEAAAAAAACAA=</HashCode>
       <FileName>Interfaces\IUserInputInterface.cs</FileName>
     </TypeIdentifier>
   </Interface>
   <Enum Name="RPG_AdvancedCS_May.GameEngine.DirectionEnum" Collapsed="true">
-    <Position X="37" Y="8.75" Width="1.5" />
+    <Position X="51.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AACAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAABAAQ=</HashCode>
       <FileName>GameEngine\DirectionEnum.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="RPG_AdvancedCS_May.Graphics.SpriteType" Collapsed="true">
-    <Position X="40.5" Y="8.75" Width="1.5" />
+    <Position X="54.75" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAgAAEAAIkAgAQAACAAAAAAEAAAAAAIAAAgAAQAABg=</HashCode>
+      <HashCode>AAAgAAEAAIkAAAQAACAAAAAAEAAAAAAIAAAgAAQAABg=</HashCode>
       <FileName>Graphics\SpriteType.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="RPG_AdvancedCS_May.Structure.AbilityEffectEnum" Collapsed="true">
-    <Position X="33.5" Y="8.75" Width="1.5" />
+    <Position X="47.75" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAQAAAAAAQAAAAAAAAAAAAAAAAAAAAABAAAQAAAAI=</HashCode>
       <FileName>Structure\Abilities\AbilityEffectEnum.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="RPG_AdvancedCS_May.Structure.ActiveAbilityEnum" Collapsed="true">
-    <Position X="35.25" Y="8.75" Width="1.5" />
+    <Position X="49.5" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAEAA=</HashCode>
       <FileName>Structure\Abilities\ActiveAbilityEnum.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Enum Name="RPG_AdvancedCS_May.Structure.ReactionTypeEnum" Collapsed="true">
-    <Position X="38.75" Y="8.75" Width="1.5" />
+    <Position X="53" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAgAEAAAA=</HashCode>
       <FileName>Structure\Abilities\ReactionTypeEnum.cs</FileName>

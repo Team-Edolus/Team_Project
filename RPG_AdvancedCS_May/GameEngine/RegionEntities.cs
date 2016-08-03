@@ -101,9 +101,9 @@
         }
         private void SetupFirstRegion()
         {
-            this.currentRegion = MageLayerRegion.Instance;
-            //this.currentRegion = StartRegion.Instance;
-            this.Player = new Warrior(1000, 200);
+            //this.currentRegion = MageLayerRegion.Instance;
+            this.currentRegion = StartRegion.Instance;
+            this.Player = new Warrior(1000, 400);
             this.LoadRegionEntities();
             this.AddNewGraphicObjects();
         }

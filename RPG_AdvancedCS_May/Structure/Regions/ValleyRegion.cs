@@ -34,7 +34,15 @@ namespace RPG_AdvancedCS_May.Structure
 
         protected override void SetObstacles()
         {
-            //this.RegionObstacles.Add(new Obstacle(0, 0, 320, 720));
+            this.RegionObstacles.Add(new Obstacle(0, 656, 320, 64));
+            this.RegionObstacles.Add(new Obstacle(320, 688, 32, 32));
+            this.RegionObstacles.Add(new Obstacle(758, 192, 372, 479));
+            this.RegionObstacles.Add(new Obstacle(256, 528, 32, 112));
+            this.RegionObstacles.Add(new Obstacle(288, 176, 32, 336));
+            this.RegionObstacles.Add(new Obstacle(464, 672, 816, 32));
+            this.RegionObstacles.Add(new Obstacle(1136, 544, 144, 128));
+            //this.RegionObstacles.Add(new Obstacle(0, 0, 320, 72));
+            //this.RegionObstacles.Add(new Obstacle(0, 0, 320, 72));
         }
     }
 }
