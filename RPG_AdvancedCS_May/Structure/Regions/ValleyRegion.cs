@@ -2,6 +2,7 @@
 
 namespace RPG_AdvancedCS_May.Structure
 {
+    using System;
     using Graphics;
 
     public class ValleyRegion : Region<ValleyRegion>
@@ -43,6 +44,10 @@ namespace RPG_AdvancedCS_May.Structure
             this.RegionObstacles.Add(new Obstacle(1136, 544, 144, 128));
             //this.RegionObstacles.Add(new Obstacle(0, 0, 320, 72));
             //this.RegionObstacles.Add(new Obstacle(0, 0, 320, 72));
+        }
+
+        protected override void SetBoostItems()
+        {           
         }
     }
 }

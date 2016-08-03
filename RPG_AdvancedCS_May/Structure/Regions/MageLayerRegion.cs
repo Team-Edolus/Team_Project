@@ -33,5 +33,10 @@
         {
 
         }
+
+        protected override void SetBoostItems()
+        {
+            this.RegionItems.Add(new Shield(1100, 280));
+        }
     }
 }

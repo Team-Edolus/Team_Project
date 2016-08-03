@@ -15,6 +15,8 @@
         private const int ProgressBarSizeY = 8;
         private const int ProgressbarOffsetX = -3;
         private const int ProgressbarOffsetY = -10;
+        private const int ShieldbarOffsetX = -6;
+        private const int ShieldbarOffsetY = -20;
 
         private ImageHandler imageHandler;
 
@@ -53,6 +55,8 @@
             {
                 this.CreateProgressBar(renderableObject as IUnit);
             }
+
+            //TODO add shield bar
         }
         public void RemoveObject(IRenderable renderableObject)
         {
@@ -86,6 +90,44 @@
                     progressBar.Value = unit.CurrentHP;
                 }
                 this.SetProgressBarLocation(unit, progressBar);
+            }
+        }
+
+        public void RedrawObjectWithAShield(IRenderable renderableObject)
+        {
+         //   CreateShieldBar((IUnit)renderableObject);
+
+            Point newCoordinates = new Point(renderableObject.X, renderableObject.Y);
+            PictureBox picBox = GetPictureBoxByObject(renderableObject);
+            picBox.Location = newCoordinates;
+
+            if (renderableObject is IUnit)
+            {
+                var unit = (IUnit)renderableObject;
+                var progressBar = GetProgressbarByObject(unit);
+                if (progressBar.Value > unit.CurrentHP)
+                {
+                    progressBar.Value = unit.CurrentHP - 1;
+                    progressBar.Value += 1;
+                }
+                else
+                {
+                    progressBar.Value = unit.CurrentHP;
+                }
+                this.SetProgressBarLocation(unit, progressBar);
+            }
+        }
+
+        private void SetBarValue(int value, int currentHP)
+        {
+            if (value > currentHP)
+            {
+                value = currentHP - 1;
+                value += 1;
+            }
+            else
+            {
+                value = currentHP;
             }
         }
 
@@ -131,6 +173,24 @@
             progressBar.BringToFront();
         }
 
+
+        private void CreateShieldBar(IUnit unit)
+        {
+            var progressBar = new CustomProgressBar
+            {
+                Size = new Size(ProgrssBarSizeX, ProgressBarSizeY),
+                Maximum = unit.MaxHP,
+                Value = unit.DefensePoints,
+                Tag = new CustomProgBarTag(unit, this.Controller)
+            };
+            progressBars.Add(progressBar);
+            this.SetShieldBarLocation(unit, progressBar);
+    
+            this.gameWindow.Controls.Add(progressBar);
+            //
+            progressBar.BringToFront();
+        }
+
         private void CreatepictureBox(IRenderable renderableObject)
         {
             var spriteImage = this.imageHandler.GetSpriteImage(renderableObject);
@@ -160,6 +220,11 @@
         private void SetProgressBarLocation(IUnit unit, ProgressBar progressBar)
         {
             progressBar.Location = new Point(unit.X + ProgressbarOffsetX, unit.Y + ProgressbarOffsetY);
+        }
+
+        private void SetShieldBarLocation(IUnit unit, ProgressBar progressBar)
+        {
+            progressBar.Location = new Point(unit.X + ShieldbarOffsetX, unit.Y + ShieldbarOffsetY);
         }
 
         private ProgressBar GetProgressbarByObject(IUnit unit)

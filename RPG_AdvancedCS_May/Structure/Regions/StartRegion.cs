@@ -9,6 +9,11 @@
             this.SpriteType = SpriteType.StartRegionBG;
         }
 
+        protected override void SetBoostItems()
+        {
+            this.RegionItems.Add(new Shield(200, 220));
+        }
+
         protected override void SetFriendlyNPCs()
         {
         }
@@ -24,7 +29,7 @@
         protected override void SetGateways()
         {
             // To ValleyRegion Gateway
-            this.RegionGateways.Add(new Gateway(544, 0, 32, 3, 
+            this.RegionGateways.Add(new Gateway(544, 0, 32, 3,
                 () => this.regionEntities.InitialiseNewRegion(ValleyRegion.Instance), 384, 688,
                 (x, y) => this.regionEntities.Player.Relocate(x, y)));
         }

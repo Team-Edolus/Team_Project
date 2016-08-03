@@ -10,5 +10,6 @@
         List<EnemyNPCUnit> RegionEnemies { get; set; }
         List<Obstacle> RegionObstacles { get; set; }
         List<Gateway> RegionGateways { get; set; }
+        List<Item> RegionItems { get; set; }
     }
 }

@@ -32,7 +32,7 @@
   <Class Name="RPG_AdvancedCS_May.InitialScreen" Collapsed="true">
     <Position X="53" Y="2.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AQAAAAAAACAAEAAAAACAAACCAgAEEAAAAAQAAAAACAI=</HashCode>
+      <HashCode>AQAAAAAAACAAEAAAAACAAACCAgAEEAABAAQAAAAACAI=</HashCode>
       <FileName>InitialScreen.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -67,7 +67,7 @@
   <Class Name="RPG_AdvancedCS_May.GameEngine.RegionEntities" Collapsed="true">
     <Position X="49.5" Y="3.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AgAAAUCAAgAUAAAAIACAIAAABAFAAAAAAAAAAQAQAAI=</HashCode>
+      <HashCode>AgAAAUCAAgAUCAAAIACAIAAABAFAAAAAAAAAAQAQAAI=</HashCode>
       <FileName>GameEngine\RegionEntities.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -142,6 +142,7 @@
       <FileName>Structure\Abilities\Spell.cs</FileName>
     </TypeIdentifier>
   </Class>
+<<<<<<< HEAD
   <Class Name="RPG_AdvancedCS_May.Structure.Axe" Collapsed="true">
     <Position X="7" Y="3.25" Width="1.5" />
     <TypeIdentifier>
@@ -149,6 +150,8 @@
       <FileName>Structure\BoostItems\Axe.cs</FileName>
     </TypeIdentifier>
   </Class>
+=======
+>>>>>>> origin/master
   <Class Name="RPG_AdvancedCS_May.Structure.Item" Collapsed="true">
     <Position X="9.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
@@ -157,6 +160,7 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
+<<<<<<< HEAD
   <Class Name="RPG_AdvancedCS_May.Structure.Pineapple" Collapsed="true">
     <Position X="9.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
@@ -164,10 +168,12 @@
       <FileName>Structure\BoostItems\Pineapple.cs</FileName>
     </TypeIdentifier>
   </Class>
+=======
+>>>>>>> origin/master
   <Class Name="RPG_AdvancedCS_May.Structure.Shield" Collapsed="true">
     <Position X="11.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAgAABAAAIQBAAAAAEA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAgAABAAAAQAAAAAAEA=</HashCode>
       <FileName>Structure\BoostItems\Shield.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -224,7 +230,7 @@
   <Class Name="RPG_AdvancedCS_May.Structure.Region&lt;T&gt;" Collapsed="true">
     <Position X="17.25" Y="1.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAEAAAA6QIAAQAAAAAABAAAAAAAAAECSggAAEAABAA=</HashCode>
+      <HashCode>AAAEAAAA6QIAAQAAAAAABAAAAAAAAAlCSggAAEAABAA=</HashCode>
       <FileName>Structure\Regions\Region.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
@@ -232,14 +238,14 @@
   <Class Name="RPG_AdvancedCS_May.Structure.StartRegion" Collapsed="true">
     <Position X="18.25" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAIAAAAAAAAABAAAAAAAAAEAAgAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAIAAAAAAAAABAAAAAAAAAkAAgAAAAAAAAA=</HashCode>
       <FileName>Structure\Regions\StartRegion.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="RPG_AdvancedCS_May.Structure.ValleyRegion" Collapsed="true">
     <Position X="20.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAIAAAAAAAAABAAAAAAAAAEAAgAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAIAAAAAAAAABAAAAAAAAAkAAgAAAAAAAAA=</HashCode>
       <FileName>Structure\Regions\ValleyRegion.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -319,8 +325,13 @@
   <Class Name="RPG_AdvancedCS_May.Structure.Unit" Collapsed="true">
     <Position X="39.75" Y="1.75" Width="1.5" />
     <TypeIdentifier>
+<<<<<<< HEAD
       <HashCode>AQAAAAAAAIAABAAAAKAAEAAIAAgAAAAAQAAAAUAAQAA=</HashCode>
       <FileName>Structure\Units\Unit.cs</FileName>
+=======
+      <HashCode>FAAAAQAAAAAAgABAAAAAAAAAAAAAAAAAAAQAAAIABDA=</HashCode>
+      <FileName>Structure\Units\Character\Warrior.cs</FileName>
+>>>>>>> origin/master
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
@@ -367,6 +378,23 @@
     </TypeIdentifier>
     <Lollipop Position="0.2" Collapsed="true" />
   </Class>
+<<<<<<< HEAD
+=======
+  <Class Name="RPG_AdvancedCS_May.Structure.MageHouseRegion" Collapsed="true">
+    <Position X="17.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAABAAAAAAAAAkAAgAAAAAAAAA=</HashCode>
+      <FileName>Structure\Regions\MageHouseRegion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="RPG_AdvancedCS_May.Structure.MageLayerRegion" Collapsed="true">
+    <Position X="13.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAIAAAAAAAAABAAAAAAAAAkAAgAAAAAAAAA=</HashCode>
+      <FileName>Structure\Regions\MageLayerRegion.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+>>>>>>> origin/master
   <Struct Name="RPG_AdvancedCS_May.GameEngine.Direction" Collapsed="true">
     <Position X="47.75" Y="5.75" Width="1.5" />
     <TypeIdentifier>
@@ -419,7 +447,7 @@
   <Interface Name="RPG_AdvancedCS_May.Interfaces.IRegionInterface" Collapsed="true">
     <Position X="0.5" Y="9.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAyAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <HashCode>AAAAAAAAyAAAAAAAAAAAAAAAAAAAAABAAAAAAAAABAA=</HashCode>
       <FileName>Interfaces\IRegionInterface.cs</FileName>
     </TypeIdentifier>
   </Interface>
@@ -489,7 +517,7 @@
   <Enum Name="RPG_AdvancedCS_May.Structure.ReactionTypeEnum" Collapsed="true">
     <Position X="53" Y="8.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAgAEAAAA=</HashCode>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAAAAAAACAAAQAAAAAgAEACAA=</HashCode>
       <FileName>Structure\Abilities\ReactionTypeEnum.cs</FileName>
     </TypeIdentifier>
   </Enum>

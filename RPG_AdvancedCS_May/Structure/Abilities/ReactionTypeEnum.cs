@@ -6,6 +6,7 @@
         TakeHeal,
         TakeBuff,
         TakeDebuff,
+        TakeShield,
         None
     }
 }

@@ -12,7 +12,7 @@
         private static RegionEntities instance;
 
         private readonly IPaintInterface painter;
-        private IRegionInterface currentRegion; 
+        private IRegionInterface currentRegion;
 
         private RegionEntities(IPaintInterface painter)
         {
@@ -25,7 +25,8 @@
         public List<Ability> Abilities { get; set; }
         public List<Obstacle> Obstacles { get; set; }
         public List<Gateway> Gateways { get; set; }
-        
+        public List<Item> Items { get; set; }
+
         public static void IntantiateClass(IPaintInterface painter)
         {
             instance = new RegionEntities(painter);
@@ -53,6 +54,11 @@
                 this.painter.AddObject(enemy);
             }
             this.painter.AddObject(Player);
+
+            foreach (var item in Items)
+            {
+                this.painter.AddObject(item);
+            }
         }
 
         private void RemoveOldGraphicObjects()
@@ -68,6 +74,11 @@
                 this.painter.RemoveObject(enemy);
             }
 
+            foreach (var item in Items)
+            {
+                this.painter.RemoveObject(item);
+            }
+
             this.painter.RemoveObject(this.currentRegion); //(background)
         }
 
@@ -78,6 +89,7 @@
             this.Abilities = new List<Ability>();
             this.Obstacles = new List<Obstacle>();
             this.Gateways = new List<Gateway>();
+            this.Items = new List<Item>();
 
             foreach (var regionFriendlyNpC in this.currentRegion.RegionFriendlyNPCs)
             {
@@ -97,6 +109,11 @@
             foreach (var regionObstacle in this.currentRegion.RegionObstacles)
             {
                 this.Obstacles.Add(regionObstacle);
+            }
+
+            foreach (var item in this.currentRegion.RegionItems)
+            {
+                this.Items.Add(item);
             }
         }
         private void SetupFirstRegion()

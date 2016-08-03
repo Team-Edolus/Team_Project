@@ -19,5 +19,6 @@
         public const string AxeDefaultImagePath = "../../Resources/AxeDefault.png";
         public const string PineappleImage = "../../Resources/pineapple35x32.png";
         public const string ShieldImage = "../../Resources/shield32x32.png";
+        
     }
 }
