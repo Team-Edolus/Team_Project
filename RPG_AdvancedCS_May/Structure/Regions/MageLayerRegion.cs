@@ -36,7 +36,8 @@
 
         protected override void SetBoostItems()
         {
-            this.RegionItems.Add(new Shield(1100, 280));
+            // this.RegionItems.Add(new Shield(1100, 280));
+            this.RegionItems.Add(new Pineapple(900, 280));
         }
     }
 }

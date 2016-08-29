@@ -6,7 +6,7 @@
     using Interfaces;
     using Structure;
 
-    public sealed class RegionEntities
+    public sealed class RegionEntities : IRegionEntities
     {
         //bg->(items)->enemies->player  ?obstacles;
         private static RegionEntities instance;

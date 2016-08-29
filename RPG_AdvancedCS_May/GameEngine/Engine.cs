@@ -123,6 +123,7 @@
             var buffY = this.regionEntities.Player.Y;
             this.regionEntities.Player.Move();
             var colisionDetected = false;
+
             foreach (var obstacle in this.regionEntities.Obstacles)
             {
                 if (DoIntersect(this.regionEntities.Player, obstacle))
@@ -154,7 +155,7 @@
                 {
                     //colisionDetected = true;
                     //break;
-                    ApplyItemEffext(item,this.regionEntities.Player);
+                    ApplyItemEffext(item, this.regionEntities.Player);
                     item.hasBeenUsed = true;
                 }
             }
@@ -177,7 +178,7 @@
         private void ApplyItemEffext(Item item, CharacterUnit player)
         {
             item.ApplyItemEffects(player);
-            this._painter.RedrawObjectWithAShield(player);                      
+            // this._painter.RedrawObjectWithAShield(player);
         }
 
         private void UsePlayerAbility(int mouseX, int mouseY)

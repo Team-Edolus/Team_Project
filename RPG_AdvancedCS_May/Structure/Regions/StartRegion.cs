@@ -11,7 +11,8 @@
 
         protected override void SetBoostItems()
         {
-            this.RegionItems.Add(new Shield(200, 220));
+           // this.RegionItems.Add(new Shield(200, 220));
+            this.RegionItems.Add(new Pineapple(200, 220));
         }
 
         protected override void SetFriendlyNPCs()

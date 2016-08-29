@@ -85,6 +85,7 @@
     <Compile Include="Interfaces\IMeleeAttacking.cs" />
     <Compile Include="Interfaces\IMoveable.cs" />
     <Compile Include="Interfaces\IPaintInterface.cs" />
+    <Compile Include="Interfaces\IRegionEntities.cs" />
     <Compile Include="Interfaces\IRegionInterface.cs" />
     <Compile Include="Interfaces\IRenderable.cs" />
     <Compile Include="Interfaces\ISpellCastable.cs" />
